@@ -2,11 +2,14 @@
 
 ##### Current stable build of gRPC v1.20.0 ( https://grpc.io/release ) | 06-26-19
 
+> They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
+
+
 Build instructions from here: https://github.com/grpc/grpc/blob/master/BUILDING.md
 
 HelloWorld-Example included. Tested with VS2017 Enterprise and msvc141 (Win 10, SDK 10.0.17763.0)
 
-#### Information about Buildsystem and Tools
+#### Information about Build system and Tools
 
 | Operating System | SDK Version   |
 |------------------|---------------|
