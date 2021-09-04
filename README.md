@@ -4,6 +4,7 @@
 ##### Latest release (no pre-releases) gRPC [v1.39.1](https://github.com/grpc/grpc/releases/tag/v1.39.1) 
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
+> 
 > For Information about the build information (compiler(s), sdks, etc follow Build-Info links (tracking since 1.22.0)
 
 ##### Releases
