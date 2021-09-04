@@ -1,5 +1,4 @@
 # Prebuilt binaries gRPC C++ for Windows
-# WARNING 1.39.1 is in uploading status...
 ##### Current stable build of gRPC v1.39.1
 ##### Latest release (no pre-releases) gRPC [v1.39.1](https://github.com/grpc/grpc/releases/tag/v1.39.1) 
 
