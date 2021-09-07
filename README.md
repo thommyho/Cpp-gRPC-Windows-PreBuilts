@@ -1,7 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
-# WARNING 1.39.1 is in uploading status...
-##### Current stable build of gRPC v1.39.1
-##### gRPC [v1.39.1](https://github.com/grpc/grpc/releases/tag/v1.39.1) 
+##### Current stable build of gRPC v1.40.0
+##### gRPC [v1.39.1](https://github.com/grpc/grpc/releases/tag/v1.40.0) 
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +9,7 @@
 
 | Version | Commit | Debug | Release  | RelWithDebInfo | MSVC142 32Bit | MSVC142 64Bit | MSVC141 32 Bit | MSVC141 64 Bit | MSVC140 32 Bit | MSVC140 64 Bit | Example |
 |---------|------------|-------|----------|----------------|---------------|---------------|----------------|----------------|----------------|----------------|---------|
-| [1.39.1 ](https://github.com/thommyho/gRPC_windows/releases/tag/v1.39.1) | 2d6b8f61cfdd1c4d2d7c1aae65a4fbf00e3e0981 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check:              | :ballot_box_with_check:             | :ballot_box_with_check:             | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:       |
+| [1.40.0 ](https://github.com/thommyho/gRPC_windows/releases/tag/v1.39.1) | 2d6b8f61cfdd1c4d2d7c1aae65a4fbf00e3e0981 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check:              | :ballot_box_with_check:             | :ballot_box_with_check:             | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:       |
 
 Build instructions from here: https://github.com/grpc/grpc/blob/master/BUILDING.md
 
@@ -41,15 +40,15 @@ HelloWorld-Example included. Tested with VS2015, VS2017 and VS2019 Enterprise an
 | benchmark             | v1.5.2         | 73d4d5e8d6d449fc8663765a42aa8aeeee844489 | https://github.com/google/benchmark                        |
 | boringssl-with-bazel  |                | bcc01b6c66b1c6fa2816b108e50a544b757fbd7b | https://github.com/google/boringssl                        |
 | cares                 | cares_1_15_0   | e982924acee7f7313b4baa4ee5ec000c5e373c30 | https://github.com/c-ares/c-ares                           |
-| envoy-api             |                | 18b54850c9b7ba29a4ab67cbd7ed7eab7b0bbdb2 | https://github.com/envoyproxy/data-plane-api               |
-| googleapis            |                | 82944da21578a53b74e547774cf62ed31a05b841 | https://github.com/googleapis/googleapis                   |
+| envoy-api             |                | df3b1ab2773147f292c4f175f790c35448328161 | https://github.com/envoyproxy/data-plane-api               |
+| googleapis            |                | 2f9af297c84c55c8b871ba4495e01ade42476c92 | https://github.com/googleapis/googleapis                   |
 | googletest            |                | c9ccac7cb7345901884aabf5d1a786cfa6e2f397 | https://github.com/google/googletest                       |
 | libuv                 | v1.34.0        | 15ae750151ac9341e5945eb38f8982d59fb99201 | https://github.com/libuv/libuv                             |
 | opencensus-proto      | v0.3.0         | 4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89 | https://github.com/census-instrumentation/opencensus-proto |
 | protobuf              | v3.15.8        | 436bd7880e458532901c58f4d9d1ea23fa7edd52 | https://github.com/google/protobuf                         | 
-| protoc-gen-validate   |                | 872b28c457822ed9c2a5405da3c33f386ac0e86f | https://github.com/envoyproxy/protoc-gen-validate          |
+| protoc-gen-validate   |                | 9da36e59fef2267fc2b1849a05159e3ecdf24f3  | https://github.com/envoyproxy/protoc-gen-validate          |
 | re2                   | 2020-06-1      | aecba11114cf1fac5497aeb844b6966106de3eb6 | https://github.com/google/re2                              |
-| udpa                  |                | cc1b757b3eddccaaaf0743cbb107742bb7e3ee4f | https://github.com/cncf/udpa                               |
+| udpa                  |                | 6414d713912e988471d192940b62bf552b11793a | https://github.com/cncf/udpa                               |
 | zlib                  | v1.2.11        | cacf7f1d4e3d44d871b605da3b647f07d718623f | https://github.com/madler/zlib                             |
 
 #### Directory Setup for using/testing the provided HelloWorld-Example(s)
