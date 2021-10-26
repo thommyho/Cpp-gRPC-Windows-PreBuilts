@@ -38,7 +38,7 @@ HelloWorld-Example included. Tested with VS2015, VS2017 and VS2019 Enterprise an
 | benchmark             | v1.5.2         | 73d4d5e8d6d449fc8663765a42aa8aeeee844489 | https://github.com/google/benchmark                        |
 | bloaty                |                | 73594cde8c9a52a102c4341c244c833aa61b9c06 | https://github.com/google/bloaty                           |
 | benchmark             | v1.5.2         | 73d4d5e8d6d449fc8663765a42aa8aeeee844489 | https://github.com/google/benchmark                        |
-| boringssl-with-bazel  |                | bcc01b6c66b1c6fa2816b108e50a544b757fbd7b | https://github.com/google/boringssl                        |
+| boringssl-with-bazel  |                | fc44652a42b396e1645d5e72aba053349992136a | https://github.com/google/boringssl                        |
 | cares                 | cares_1_15_0   | e982924acee7f7313b4baa4ee5ec000c5e373c30 | https://github.com/c-ares/c-ares                           |
 | envoy-api             |                | 2f0d081fab0b0823f088c6e368f40e1992f46fcd | https://github.com/envoyproxy/data-plane-api               |
 | googleapis            |                | 2f9af297c84c55c8b871ba4495e01ade42476c92 | https://github.com/googleapis/googleapis                   |
