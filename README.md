@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
-##### Current stable build of gRPC v1.41.1
-##### Latest release (no pre-releases) gRPC [v1.41.1](https://github.com/grpc/grpc/releases/tag/v1.41.1) 
+##### Current stable build of gRPC v1.42.0
+##### Latest release (no pre-releases) gRPC [v1.42.0](https://github.com/grpc/grpc/releases/tag/v1.42.0) 
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 > 
