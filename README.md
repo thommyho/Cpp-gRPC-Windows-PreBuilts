@@ -6,6 +6,10 @@
 > 
 > For Information about the build information (compiler(s), sdks, etc follow Build-Info links (tracking since 1.22.0)
 
+#### Aditional Visual Studio Examples
+Nearly all C++ Examples from https://github.com/grpc/grpc/tree/master/examples/cpp had been ported to the same structure as mentioned in the release notes.
+They are maintained in this repository: https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples - Only tested with v1.42.0 and above.
+
 ##### Releases
 
 | Version | Build-Info | Debug | Release  | RelWithDebInfo | MSVC142 32Bit | MSVC142 64Bit | MSVC141 32 Bit | MSVC141 64 Bit | MSVC140 32 Bit | MSVC140 64 Bit | Example |
