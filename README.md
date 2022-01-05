@@ -12,7 +12,7 @@ They are maintained in this repository: https://github.com/thommyho/Cpp-gRPC-Vis
 
 #### Additional Documentation
 
-[Step by step guide](https://thommyho.github.io/Cpp-gRPC-Windows-PreBuilts) 
+&#8594; &#8594; [Step by step installation (usage) guide](https://thommyho.github.io/Cpp-gRPC-Windows-PreBuilts) &#8592; &#8592;
 
 ##### Releases
 
