@@ -10,7 +10,7 @@
 Nearly all C++ Examples from https://github.com/grpc/grpc/tree/master/examples/cpp had been ported to the same structure as mentioned in the release notes.
 They are maintained in this repository: https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples - Only tested with v1.42.0 and above.
 
-#### Additional Documentation - 
+#### Additional Documentation
 
 [Step by step guide](https://thommyho.github.io/Cpp-gRPC-Windows-PreBuilts) 
 
