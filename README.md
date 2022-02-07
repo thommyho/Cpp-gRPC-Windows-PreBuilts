@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
-##### Current stable build of gRPC v1.43.0
-##### gRPC [v1.43.0](https://github.com/grpc/grpc/releases/tag/v1.43.0) 
+##### Current stable build of gRPC v1.43.2
+##### gRPC [v1.43.2](https://github.com/grpc/grpc/releases/tag/v1.43.2) 
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -9,11 +9,11 @@
 
 | Version | Commit | Debug | Release  | RelWithDebInfo | MSVC142 32Bit | MSVC142 64Bit | MSVC141 32 Bit | MSVC141 64 Bit | MSVC140 32 Bit | MSVC140 64 Bit | Example |
 |---------|------------|-------|----------|----------------|---------------|---------------|----------------|----------------|----------------|----------------|---------|
-| [1.43.0 ](https://github.com/thommyho/gRPC_windows/releases/tag/v1.43.0) | b0f37a22bbae12a4b225a88be6d18d5e41dce881 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check:              | :ballot_box_with_check:             | :ballot_box_with_check:             | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:       |
+| [1.43.2 ](https://github.com/thommyho/gRPC_windows/releases/tag/v1.43.2) | dc78581af30da834b7b95572f109bf6c708686e0 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check:              | :ballot_box_with_check:             | :ballot_box_with_check:             | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:       |
 
 Build instructions from here: https://github.com/grpc/grpc/blob/master/BUILDING.md
 
-HelloWorld-Example included. Tested with VS2015, VS2017 and VS2019 Enterprise and msvc140, msvc141, msvc142 (Win 10, SDK 10.0.19042)
+Examples included. Tested with VS2015, VS2017 and VS2019 Enterprise and msvc140, msvc141, msvc142 (Win 10, SDK 10.0.19042)
 
 #### Information about Build system and Tools
 
