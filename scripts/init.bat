@@ -1,0 +1,1 @@
+..\dev_tools\python\7z.exe x ..\dev_tools\python\PythonPackage.zip -o..\_python

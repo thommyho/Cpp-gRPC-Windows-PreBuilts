@@ -1,0 +1,82 @@
+# https://squidfunk.github.io/mkdocs-material/getting-started
+# https://squidfunk.github.io/mkdocs-material/reference/admonitions
+# https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml
+
+site_name: Using Prebuilt-Packages of gRPC
+site_description: Instruction and documentation to set up gRPC on windows maschine
+site_author: Thomas Hochstrasser
+site_url: https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts
+
+repo_name: thommyho/Cpp-gRPC-Windows-PreBuilts
+repo_url: https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts
+edit_uri: ""
+
+copyright: "Copyright &copy; 2020-2022 Thomas Hochstrasser"
+
+docs_dir: docs
+
+theme:
+  logo: _assets/logo.svg
+  favicon: _assets/favicon.ico
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  font:
+    text: "arial, sans-serif"
+    code: monospace
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.expand
+    - search.highlight
+    - search.share
+    - search.suggest
+
+extra_css:
+  - _assets/user.css
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - def_list
+  - attr_list
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+  - codehilite:
+      guess_lang: false
+  - markdown_include.include:
+      base_path: docs
+
+plugins:
+  - search:
+      lang: en
+
+nav:
+  - "Home":
+      - "Home": index.md
+  - "Getting started":
+      - "In three steps": steps.md
+      - "FAQ": faq.md

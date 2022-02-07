@@ -1,0 +1,4 @@
+[submodule "dev_tools/python"]
+	path = dev_tools/python
+	url = https://github.com/thommyho/Portable_Python_Windows
+	branch = v3.10.0-x64
