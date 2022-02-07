@@ -35,7 +35,7 @@ Examples included. Tested with VS2015, VS2017 and VS2019 Enterprise and msvc140,
 | Third Party Component | Version        | Commit                                   | Link                                                       |
 |-----------------------|----------------|------------------------------------------|------------------------------------------------------------|
 | abseil-cpp            | 20211102.0     | 215105818dfde3174fe799600bb0f3cae233d0bf | https://github.com/abseil/abseil-cpp                       |
-| benchmark             | v1.6.0         | 0baacde3618ca617da95375e0af13ce1baadea47 | https://github.com/google/benchmark                        |
+| benchmark             |                | 0baacde3618ca617da95375e0af13ce1baadea47 | https://github.com/google/benchmark                        |
 | bloaty                |                | 60209eb1ccc34d5deefb002d1b7f37545204f7f2 | https://github.com/google/bloaty                           |
 | boringssl-with-bazel  |                | 4fb158925f7753d80fb858cb0239dff893ef9f15 | https://github.com/google/boringssl                        |
 | cares                 | cares_1_15_0   | e982924acee7f7313b4baa4ee5ec000c5e373c30 | https://github.com/c-ares/c-ares                           |
