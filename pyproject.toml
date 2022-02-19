@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "docs"
+name = "MyDocs"
 version = "0.1.0"
 description = "Getting Started with gRPC on Windows"
 authors = ["Thomas Hochstrasser <thommyho1988@gmail.com>"]
