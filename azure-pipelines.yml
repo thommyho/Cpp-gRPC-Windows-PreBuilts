@@ -3,6 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# Steps toDo:
+# 
+# Trigger-Events
+# (o) on new tags
+# Required Build-Tooling
+# (x/o) Visual Studio 2019(x) with C++ modules installed
+# (x/0) New enough CMake
+# (o) NASM compiler
+# (o) Golang compiler
+
 trigger:
 - master
 
