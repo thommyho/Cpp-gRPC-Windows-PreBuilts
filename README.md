@@ -9,7 +9,7 @@
 
 | Version | Commit | Debug | Release  | RelWithDebInfo | MSVC142 32Bit | MSVC142 64Bit | MSVC141 32 Bit | MSVC141 64 Bit | MSVC140 32 Bit | MSVC140 64 Bit | Example |
 |---------|------------|-------|----------|----------------|---------------|---------------|----------------|----------------|----------------|----------------|---------|
-| [1.44.0 ](https://github.com/thommyho/gRPC_windows/releases/tag/v1.43.2) | 591d56e1300b6d11948e1b821efac785a295989c  | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check:              | :ballot_box_with_check:             | :ballot_box_with_check:             | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:       |
+| [1.44.0 ](https://github.com/thommyho/gRPC_windows/releases/tag/v1.44.0) | 591d56e1300b6d11948e1b821efac785a295989c  | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check:              | :ballot_box_with_check:             | :ballot_box_with_check:             | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:              | :ballot_box_with_check:       |
 
 Build instructions from here: https://github.com/grpc/grpc/blob/master/BUILDING.md
 
