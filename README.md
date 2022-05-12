@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.45.2
+##### Current stable build of gRPC v1.46.0
 
-##### gRPC [v1.45.2](https://github.com/grpc/grpc/releases/tag/v1.45.2)
+##### gRPC [v1.46.0](https://github.com/grpc/grpc/releases/tag/v1.46.0)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.45.2](https://github.com/thommyho/gRPC_windows/releases/tag/v1.45.2) | b39ffcc425ea990a537f98ec6fe6a1dcb90470d7 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.46.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.0so) | 0da56bcc0e42a9e288d7511ed8426b9831ffbfb5 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -39,7 +39,7 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | bloaty                |            | 60209eb1ccc34d5deefb002d1b7f37545204f7f2 | <https://github.com/google/bloaty>                           |
 | boringssl-with-bazel  |            | b9232f9e27e5668bc0414879dcdedb2a59ea75f2 | <https://github.com/google/boringssl>                        |
 | cares                 |            | 6654436a307a5a686b008c1d4c93b0085da6e6d8 | <https://github.com/c-ares/c-ares>                           |
-| envoy-api             |            | ff47e0a4bd03c0580305f9b138cc7937b63f7900 | <https://github.com/envoyproxy/data-plane-api>               |
+| envoy-api             |            | 9c42588c956220b48eb3099d186487c2f04d32ec | <https://github.com/envoyproxy/data-plane-api>               |
 | googleapis            |            | 2f9af297c84c55c8b871ba4495e01ade42476c92 | <https://github.com/googleapis/googleapis>                   |
 | googletest            |            | 0e402173c97aea7a00749e825b194bfede4f2e45 | <https://github.com/google/googletest>                       |
 | libuv                 | v1.37.0    | 02a9e1be252b623ee032a3137c0b0c94afbe6809 | <https://github.com/libuv/libuv>                             |
@@ -49,7 +49,7 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | protoc-gen-validate   |            | 9da36e59fef2267fc2b1849a05159e3ecdf24f3  | <https://github.com/envoyproxy/protoc-gen-validate>          |
 | re2                   | 2021-09-01 | 8e08f47b11b413302749c0d8b17a1c94777495d5 | <https://github.com/google/re2>                              |
 | xds                   |            | cb28da3451f158a947dfc45090fe92b07b243bc1 | <https://github.com/cncf/xds>                                |
-| zlib                  | v1.2.11    | cacf7f1d4e3d44d871b605da3b647f07d718623f | <https://github.com/madler/zlib>                             |
+| zlib                  | v1.2.12    | 21767c654d31d2dccdde4330529775c6c5fd5389 | <https://github.com/madler/zlib>                             |
 
 #### Directory Setup for using/testing the provided HelloWorld-Example(s)
 
