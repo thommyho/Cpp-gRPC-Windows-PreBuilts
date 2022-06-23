@@ -26,12 +26,13 @@ pool:
   vmImage: windows-2019
 
 steps:
-- script: choco install nasm
+- script: choco install nasm -y
   displayName: 'Install dependencies'
 
 - script: |
     cmake --version
     python --version
+    nasm --version
   displayName: 'Show information build tools'
 
 - script: |
