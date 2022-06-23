@@ -50,6 +50,9 @@ steps:
     git submodule update --init --depth=1
   displayName: 'Checkout Sources'
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    md build
+    md out
+    cd build
+    cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=../out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=../out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=../out/bin
+    cmake --build . --config Debug --target install
+  displayName: 'Run build'
