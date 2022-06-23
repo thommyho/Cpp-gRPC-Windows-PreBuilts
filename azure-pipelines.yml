@@ -39,6 +39,11 @@ steps:
   displayName: 'Show information build tools'
 
 - script: |
+    git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
+    cd grpc
+    git submodule update --init --depth=1
+  displayName: 'Checkout Sources'
+- script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
