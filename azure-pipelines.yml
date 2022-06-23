@@ -28,11 +28,11 @@ pool:
 steps:
 - script: |
     choco install nasm -y
-    echo '##vso[task.prependpath]C:\Program Files\NASM'
-    echo "$PATH"'
   displayName: 'Install dependencies'
 
 - script: |
+    echo '##vso[task.prependpath]C:\Program Files\NASM'
+    echo "$PATH"'
     cmake --version
     python --version
     nasm --version
