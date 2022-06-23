@@ -26,7 +26,10 @@ pool:
   vmImage: windows-2019
 
 steps:
-- script: choco install nasm -y
+- script: |
+    choco install nasm -y
+    echo '##vso[task.prependpath]C:\Program Files\NASM'
+    echo "$PATH"'
   displayName: 'Install dependencies'
 
 - script: |
