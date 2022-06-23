@@ -39,6 +39,8 @@ steps:
     Write-Host $NewPathInRegistry
     
 - script: |
+    cd C:\Program Files\NASM
+    dir
     cmake --version
     python --version
     nasm --version
