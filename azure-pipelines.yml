@@ -26,24 +26,22 @@ pool:
   vmImage: windows-2019
 
 steps:
-- script: |
-    choco install nasm -y
-  displayName: 'Install dependencies'
+# - script: |
+#     choco install nasm -y
+#   displayName: 'Install dependencies'
 
-- pwsh: |
-        $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
-        $newpath = "C:\Program Files\NASM;$oldpath" 
-        Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newpath
-- pwsh: |
-    $NewPathInRegistry = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
-    Write-Host $NewPathInRegistry
+# - pwsh: |
+#         $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+#         $newpath = "C:\Program Files\NASM;$oldpath" 
+#         Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newpath
+# - pwsh: |
+#     $NewPathInRegistry = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+#     Write-Host $NewPathInRegistry
     
 - script: |
-    cd C:\Program Files\NASM
-    dir
     cmake --version
     python --version
-    nasm --version
+    go --version
   displayName: 'Show information build tools'
 
 - script: |
