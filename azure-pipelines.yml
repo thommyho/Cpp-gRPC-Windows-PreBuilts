@@ -30,9 +30,15 @@ steps:
     choco install nasm -y
   displayName: 'Install dependencies'
 
+- pwsh: |
+        $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+        $newpath = "C:\Program Files\NASM;$oldpath" 
+        Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newpath
+- pwsh: |
+    $NewPathInRegistry = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+    Write-Host $NewPathInRegistry
+    
 - script: |
-    echo '##vso[task.prependpath]C:\Program Files\NASM'
-    echo "$PATH"'
     cmake --version
     python --version
     nasm --version
