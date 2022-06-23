@@ -50,6 +50,7 @@ steps:
     git submodule update --init --depth=1
   displayName: 'Checkout Sources'
 - script: |
+    cd grpc
     md build
     md out
     cd build
