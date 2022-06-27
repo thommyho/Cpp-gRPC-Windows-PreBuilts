@@ -74,7 +74,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/grpc/third_party/cares/cares/lib/$(build_configuration)'
+    SourceFolder: '$(Build.SourcesDirectory)/grpc/_mybuild/third_party/cares/cares/lib/$(build_configuration)'
     Contents: '**'
     TargetFolder: '$(Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/lib'
 - task: CopyFiles@2
