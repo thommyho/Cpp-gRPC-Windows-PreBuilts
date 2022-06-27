@@ -23,7 +23,7 @@ resources:
  repositories:
  - repository: GithubGrpcRepo
    type: github
-   endpoint: https://github.com/grpc/grpc
+   endpoint: grpc/grpc
    name: grpc
 
 trigger:
