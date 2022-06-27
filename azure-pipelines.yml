@@ -19,6 +19,13 @@
 # (o) Build Release-Package
 # (o) Update Documentation
 
+resources:
+ repositories:
+ - repository: GithubGrpcRepo
+   type: github
+   endpoint: https://github.com/grpc/grpc
+   name: grpc
+
 trigger:
 - master
 
@@ -26,6 +33,9 @@ pool:
   vmImage: windows-2019
 
 steps:
+- checkout: self
+- checkout: GithubGrpcRepo
+- script:  dir $(Build.SourcesDirectory)
 # - script: |
 #     choco install nasm -y
 #   displayName: 'Install dependencies'
@@ -38,22 +48,22 @@ steps:
 #     $NewPathInRegistry = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
 #     Write-Host $NewPathInRegistry
     
-- script: |
-    cmake --version
-    python --version
-    go version
-  displayName: 'Show information build tools'
+# - script: |
+#     cmake --version
+#     python --version
+#     go version
+#   displayName: 'Show information build tools'
 
-- script: |
-    git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
-    cd grpc
-    git submodule update --init --depth=1
-  displayName: 'Checkout Sources'
-- script: |
-    cd grpc
-    md build
-    md out
-    cd build
-    cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=../out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=../out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=../out/bin
-    cmake --build . --config Debug --target install
-  displayName: 'Run build'
+# - script: |
+#     git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
+#     cd grpc
+#     git submodule update --init --depth=1
+#   displayName: 'Checkout Sources'
+# - script: |
+#     cd grpc
+#     md build
+#     md out
+#     cd build
+#     cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=../out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=../out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=../out/bin
+#     cmake --build . --config Debug --target install
+#   displayName: 'Run build'
