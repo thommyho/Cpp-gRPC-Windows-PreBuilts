@@ -19,12 +19,6 @@
 # (o) Build Release-Package
 # (o) Update Documentation
 
-resources:
- repositories:
-  - repository: PublicGithubGrpc # In a different organization
-    endpoint: https://github.com/grpc/grpc.git
-    type: git
-    name: app
 trigger:
 - master
 
@@ -32,9 +26,6 @@ pool:
   vmImage: windows-2019
 
 steps:
-- checkout: self
-- checkout: GithubGrpcRepo
-- script:  dir $(Build.SourcesDirectory)
 # - script: |
 #     choco install nasm -y
 #   displayName: 'Install dependencies'
@@ -53,11 +44,13 @@ steps:
 #     go version
 #   displayName: 'Show information build tools'
 
-# - script: |
-#     git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
-#     cd grpc
-#     git submodule update --init --depth=1
-#   displayName: 'Checkout Sources'
+- script: |
+    dir $(Build.SourcesDirectory)
+    git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
+    dir $(Pipeline.Workspace)/s
+#cd grpc
+#git submodule update --init --depth=1
+  displayName: 'Checkout Sources'
 # - script: |
 #     cd grpc
 #     md build
