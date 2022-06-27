@@ -81,6 +81,12 @@ steps:
     maximumCpuCount: true
     platform: 'x64'
     configuration: 'Debug'
+- task: MSBuild@1
+  inputs:
+    solution: '$(Build.SourcesDirectory)/grpc/_mybuild/INSTALL.vcxproj'
+    maximumCpuCount: true
+    platform: 'x64'
+    configuration: 'Debug'
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/_out'
@@ -105,3 +111,11 @@ steps:
 #     cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=../out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=../out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=../out/bin
 #     
 #   displayName: 'Run build'
+- task: VSBuild@1
+  inputs:
+    solution: '**\*.sln'
+    vsVersion: '17.0'
+    platform: 'x64'
+    configuration: 'debug'
+    maximumCpuCount: true
+    msbuildArchitecture: 'x64'
