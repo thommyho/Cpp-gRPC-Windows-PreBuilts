@@ -21,11 +21,10 @@
 
 resources:
  repositories:
- - repository: GithubGrpcRepo
-   type: github
-   endpoint: grpc/grpc
-   name: grpc
-
+  - repository: PublicGithubGrpc # In a different organization
+    endpoint: https://github.com/grpc/grpc.git
+    type: git
+    name: app
 trigger:
 - master
 
