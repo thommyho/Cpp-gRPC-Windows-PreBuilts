@@ -49,45 +49,37 @@ steps:
      git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
      md _out
      dir $(Build.SourcesDirectory)
-  displayName: 'Checkout Sources'
+  displayName: '[Git] Checkout Sources'
 
 - script: |
     git submodule update --init --depth=1
     md _mybuild
   workingDirectory: $(Build.SourcesDirectory)/grpc
-  displayName: 'Get submodules'
-
-# - script: |
-#     cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=$(Build.SourcesDirectory)\_out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)\_out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)\_out/bin
-#   workingDirectory: $(Build.SourcesDirectory)/grpc/_mybuild
-#   displayName: 'CMake-Configuration'
-
-# - script: |
-#     cmake --build . --config Debug --target install
-#   workingDirectory: c
-#   displayName: 'CMake-Build'
-  #failOnStderr: #
- # env: { string: string } # mapping of environment variables to add
+  displayName: '[Git] Get submodules'
 
 - task: CMake@1
+  displayName: '[CMake] Configure'
   inputs:
       workingDirectory: $(Build.SourcesDirectory)/grpc/_mybuild
       cmakeArgs: .. -G "Visual Studio 17 2022" -A x64 -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=$(Build.SourcesDirectory)\_out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)\_out\lib -DEXECUTABLE_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)\_out\bin -DCMAKE_SYSTEM_VERSION=10.0.19041
 - script: |
     dir $(Build.SourcesDirectory)\grpc\_mybuild
 - task: MSBuild@1
+  displayName: '[MSBuild] Build Project'
   inputs:
     solution: '$(Build.SourcesDirectory)/grpc/_mybuild/ALL_BUILD.vcxproj'
     maximumCpuCount: true
     platform: 'x64'
     configuration: 'Debug'
 - task: MSBuild@1
+  displayName: '[MSBuild] Install missing sources'
   inputs:
     solution: '$(Build.SourcesDirectory)/grpc/_mybuild/INSTALL.vcxproj'
     maximumCpuCount: true
     platform: 'x64'
     configuration: 'Debug'
 - task: ArchiveFiles@2
+  displayName: '[Zipping] Compress all together'
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/_out'
     includeRootFolder: false
@@ -95,27 +87,7 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
+  displayName: '[Publish] Archive and publish to Azure'
   inputs:
      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-     ArtifactName: grpc_package
-    
-
-#cd grpc
-#
-  
-# - script: |
-#     cd grpc
-#     md build
-#     md out
-#     cd build
-#     cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=../out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=../out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=../out/bin
-#     
-#   displayName: 'Run build'
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
-    vsVersion: '17.0'
-    platform: 'x64'
-    configuration: 'debug'
-    maximumCpuCount: true
-    msbuildArchitecture: 'x64'
+     ArtifactName: vs2022_x64_debug
