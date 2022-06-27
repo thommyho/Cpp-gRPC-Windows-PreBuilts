@@ -46,6 +46,7 @@ steps:
 
 - script: |
      git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
+     md _out
      dir $(Build.SourcesDirectory)
   displayName: 'Checkout Sources'
 
@@ -54,7 +55,16 @@ steps:
     md _mybuild
   workingDirectory: $(Build.SourcesDirectory)/grpc
   displayName: 'Get submodules'
-  
+
+- script: |
+    cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=$(Build.SourcesDirectory)/_out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)/_out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)/_out/bin
+  workingDirectory: $(Build.SourcesDirectory)/grpc/_mybuild
+  displayName: 'CMake-Configuration'
+
+- script: |
+    cmake --build . --config Debug --target install
+  workingDirectory: $(Build.SourcesDirectory)/grpc/_mybuild
+  displayName: 'CMake-Build'
   #failOnStderr: #
  # env: { string: string } # mapping of environment variables to add
 
@@ -67,5 +77,5 @@ steps:
 #     md out
 #     cd build
 #     cmake .. -G "Visual Studio 16 2019" -A x64  -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=../out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=../out/lib -DEXECUTABLE_OUTPUT_PATH:PATH=../out/bin
-#     cmake --build . --config Debug --target install
+#     
 #   displayName: 'Run build'
