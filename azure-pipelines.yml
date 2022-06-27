@@ -73,12 +73,13 @@ steps:
       workingDirectory: $(Build.SourcesDirectory)/grpc/_mybuild
       cmakeArgs: '-A x64 -DABSL_ENABLE_INSTALL:BOOL=ON -DCARES_STATIC_PIC:BOOL=ON -DRE2_BUILD_TESTING:BOOL=OFF -DCMAKE_INSTALL_PREFIX=$(Build.SourcesDirectory)\_out -DCMAKE_BUILD_TYPE=Debug -DLIBRARY_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)\_out\lib -DEXECUTABLE_OUTPUT_PATH:PATH=$(Build.SourcesDirectory)\_out\bin -DCMAKE_SYSTEM_NAME=WindowsStore -DCMAKE_SYSTEM_VERSION=10.0 ..'
 - script: |
-    dir $(Build.SourcesDirectory)/grpc/_mybuild
+    dir $(Build.SourcesDirectory)\grpc\_mybuild
 - task: MSBuild@1
   inputs:
     solution: '$(Build.SourcesDirectory)/grpc/_mybuild/ALL_BUILD.vcxproj'
     maximumCpuCount: true
     platform: 'x64'
+    configuration: 'Debug'
 #cd grpc
 #
   
