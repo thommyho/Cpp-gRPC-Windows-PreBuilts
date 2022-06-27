@@ -51,6 +51,7 @@ steps:
 
 - script: |
     git submodule update --init --depth=1
+    md _mybuild
   workingDirectory: $(Build.SourcesDirectory)/grpc
   displayName: 'Get submodules'
   
