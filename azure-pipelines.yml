@@ -49,9 +49,11 @@ steps:
     dir $(Build.SourcesDirectory)
     displayName: 'Checkout Sources'
 
-- script: git submodule update --init --depth=1
-  workingDirectory: $(Build.SourcesDirectory)/grpc
-  displayName: "Get submodules"
+- script: |
+    git submodule update --init --depth=1
+    workingDirectory: $(Build.SourcesDirectory)/grpc
+    displayName: 'Get submodules'
+  
   #failOnStderr: #
  # env: { string: string } # mapping of environment variables to add
 
