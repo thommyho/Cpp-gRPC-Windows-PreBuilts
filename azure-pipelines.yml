@@ -45,14 +45,14 @@ steps:
 #   displayName: 'Show information build tools'
 
 - script: |
-    git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
-    dir $(Build.SourcesDirectory)
-    displayName: 'Checkout Sources'
+     git clone --depth=1 -b v1.47.0 https://github.com/grpc/grpc
+     dir $(Build.SourcesDirectory)
+  displayName: 'Checkout Sources'
 
 - script: |
     git submodule update --init --depth=1
-    workingDirectory: $(Build.SourcesDirectory)/grpc
-    displayName: 'Get submodules'
+  workingDirectory: $(Build.SourcesDirectory)/grpc
+  displayName: 'Get submodules'
   
   #failOnStderr: #
  # env: { string: string } # mapping of environment variables to add
