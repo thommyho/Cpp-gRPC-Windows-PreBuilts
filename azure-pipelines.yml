@@ -88,6 +88,12 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+- task: PublishBuildArtifacts@1
+  inputs:
+     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+     ArtifactName: grpc_package
+    
+
 #cd grpc
 #
   
