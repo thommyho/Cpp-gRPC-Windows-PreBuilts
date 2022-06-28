@@ -101,7 +101,7 @@ steps:
 
 - script: |
     rmdir "$(build_configuration)" /S /Q
-  workingDirectory: (Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/bin
+  workingDirectory: $(Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/bin
   displayName: '[Cleanup] Remove unwanted directories'
 
 - task: ArchiveFiles@2
