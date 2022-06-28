@@ -8,10 +8,8 @@
 # Trigger-Events
 # (o) on new tags
 # Required Build-Tooling
-# (x/o) Visual Studio 2019(x) with C++ packages installed
-# (o) Visual Studio 2015(x) with C++ packages installed (possible to have multipe versions?)
-# (o) Visual Studio 2015(x) with C++ packages installed (possible to have multipe versions?)
-# (x/0) New enough CMake
+# (x) Visual Studio 2022(x) with C++ packages installed
+# (x) New enough CMake
 # (o) NASM compiler
 # (o) Golang compiler
 # (o) Apply fixes
@@ -94,16 +92,28 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/bin'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/bin/$(build_configuration)'
+    Contents: '**'
+    TargetFolder: '$(Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/bin'
+    OverWrite: true
+
+- script: |
+    rmdir "$(build_configuration)" /S /Q
+  workingDirectory: (Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)/$(build_toolchain)/bin
+  displayName: '[Cleanup] Remove unwanted directories'
+
 - task: ArchiveFiles@2
   displayName: '[Zipping] Compress all together'
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/$(build_architecture)_$(build_configuration)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)_$(build_architecture)_$(build_configuration)_$(build_toolchain).zip'
     replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
   displayName: '[Publish] Archive and publish to Azure'
   inputs:
      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-     ArtifactName: vs2022_x64_debug
+     ArtifactName: $(build_architecture)_$(build_configuration)_$(build_toolchain)
