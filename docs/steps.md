@@ -10,6 +10,7 @@ Or use following release table
 |                                                         Version                                                         |                                 Build-Info                                 |        All Build-Configurations         |                Examples                 |
 |:-----------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|:---------------------------------------:|:---------------------------------------:|
 | **[1.47.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.47.0) (:octicons-heart-fill-24:{ .heart } latest)** | **[link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.47.0)** | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
+| **[1.46.4](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.4) (:octicons-heart-fill-24:{ .heart } latest)** | **[link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.4)** | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
 |                         [1.46.3](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.3)                         |   [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.1)   | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
 |                         [1.46.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.1)                         |   [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.1)   | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
 |                         [1.46.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.0)                         |   [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.0)   | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
@@ -32,7 +33,7 @@ The precompiled libraries are attached as assets compressed in zip archives to t
 !!! warning "So far all releases had been successfully built and tested against 2019 and 2022 compilers.
 !!! success
 
-    - [x] Downloaded one or more archives e.g.: `MSVC142_64.zip`.
+    - [x] Downloaded one or more archives e.g.: `MSVC143_64.zip`.
     - [x] Downloaded the corresponding `Examples.zip` of the release.
 
 ## Unpack the archives
@@ -44,12 +45,16 @@ If you completed the task, proceed as follows to this project setup
 ├─ vs2015/      # -> From Examples.zip - Directory containing project files (organize source code files and other resources) for Visual Studio 2015
 ├─ vs2017/      # -> From Examples.zip - Directory containing project files (organize source code files and other resources) for Visual Studio 2017
 ├─ vs2019/      # -> From Examples.zip - Directory containing project files (organize source code files and other resources) for Visual Studio 2019
+├─ vs2022/      # -> From Examples.zip - Directory containing project files (organize source code files and other resources) for Visual Studio 2022
 ├─ MSVC140_32/  # -> From MSC140_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2015 targeting 32-bit
 ├─ MSVC140_64/  # -> From MSC140_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2015 targeting 64-bit
 ├─ MSVC140_32/  # -> From MSC141_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2017 targeting 32-bit
 ├─ MSVC140_64/  # -> From MSC141_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2017 targeting 64-bit
-├─ MSVC142_32/  # -> From MSC142_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2019 targeting 64-bit
+├─ MSVC142_32/  # -> From MSC142_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2019 targeting 32-bit
 ├─ MSVC142_64/  # -> From MSC142_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2019 targeting 64-bit
+├─ MSVC143_32/  # -> From MSC143_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2022 targeting 32-bit
+├─ MSVC143_64/  # -> From MSC143_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2022 targeting 64-bit
+
 ├─ .gitattributes  # Can be ignored.
 ├─ .gitignore      # Can be ignored.
 └─ README.md       # Can be ingored.
