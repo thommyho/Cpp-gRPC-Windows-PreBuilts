@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.48.0
+##### Current stable build of gRPC v1.49.1
 
-##### gRPC [v1.48.0](https://github.com/grpc/grpc/releases/tag/v1.48.0)
+##### gRPC [v1.49.1](https://github.com/grpc/grpc/releases/tag/v1.49.1)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.48.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.48.0) | d2054ec6c6e8abcecf0e24b0b4ee75035d80c3cc | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.49.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.49.1) | a80a8f74b8f2ff0a89b8b1d3510d14d87efa7d06 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -34,22 +34,24 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 
 | Third Party Component | Version    | Commit                                   | Link                                                         |
 |-----------------------|------------|------------------------------------------|--------------------------------------------------------------|
-| abseil-cpp            | 20220623.0 | 273292d1cfc0a94a65082ee350509af1d113344d | <https://github.com/abseil/abseil-cpp>                       |
-| benchmark             |            | 0baacde3618ca617da95375e0af13ce1baadea47 | <https://github.com/google/benchmark>                        |
+| abseil-cpp            |            | 5dd240724366295970c613ed23d0092bcf392f18 | <https://github.com/abseil/abseil-cpp>                       |
+| capstone              |            |                                          |                                                              |
+| demumble              |            | 01098eab821b33bd31b9778aea38565cd796aa85 |                                                              |
+| benchmark             |            | 5b7683f49e1e9223cf9927b24f6fd3d6bd82e3f8 | <https://github.com/google/benchmark>                        |
 | bloaty                |            | 60209eb1ccc34d5deefb002d1b7f37545204f7f2 | <https://github.com/google/bloaty>                           |
 | boringssl-with-bazel  |            | b9232f9e27e5668bc0414879dcdedb2a59ea75f2 | <https://github.com/google/boringssl>                        |
 | cares                 |            | 6654436a307a5a686b008c1d4c93b0085da6e6d8 | <https://github.com/c-ares/c-ares>                           |
-| envoy-api             |            | 9c42588c956220b48eb3099d186487c2f04d32ec | <https://github.com/envoyproxy/data-plane-api>               |
+| envoy-api             |            | bf6154e482bbd5e6f64032993206e66b6116f2bd | <https://github.com/envoyproxy/data-plane-api>               |
 | googleapis            |            | 2f9af297c84c55c8b871ba4495e01ade42476c92 | <https://github.com/googleapis/googleapis>                   |
 | googletest            |            | 0e402173c97aea7a00749e825b194bfede4f2e45 | <https://github.com/google/googletest>                       |
-| libuv                 | v1.37.0    | 02a9e1be252b623ee032a3137c0b0c94afbe6809 | <https://github.com/libuv/libuv>                             |
-| opencensus-proto      | v0.3.0     | 4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89 | <https://github.com/census-instrumentation/opencensus-proto> |
+| libuv                 |            | 02a9e1be252b623ee032a3137c0b0c94afbe6809 | <https://github.com/libuv/libuv>                             |
+| opencensus-proto      |            | 4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89 | <https://github.com/census-instrumentation/opencensus-proto> |
 | opentelemetry         |            | 60fa8754d890b5c55949a8c68dcfd7ab5c2395df | <https://github.com/open-telemetry/opentelemetry-proto>      |
-| protobuf              | v3.19.4    | 22d0e265de7d2b3d2e9a00d071313502e7d4cccf | <https://github.com/google/protobuf>                         |
+| protobuf              |            | 24487dd1045c7f3d64a21f38a3f0c06cc4cf2edb | <https://github.com/google/protobuf>                         |
 | protoc-gen-validate   |            | 9da36e59fef2267fc2b1849a05159e3ecdf24f3  | <https://github.com/envoyproxy/protoc-gen-validate>          |
-| re2                   | 2021-09-01 | 8e08f47b11b413302749c0d8b17a1c94777495d5 | <https://github.com/google/re2>                              |
+| re2                   |            | 5bd613749fd530b576b890283bfb6bc6ea6246cb | <https://github.com/google/re2>                              |
 | xds                   |            | cb28da3451f158a947dfc45090fe92b07b243bc1 | <https://github.com/cncf/xds>                                |
-| zlib                  | v1.2.12    | 21767c654d31d2dccdde4330529775c6c5fd5389 | <https://github.com/madler/zlib>                             |
+| zlib                  |            | cacf7f1d4e3d44d871b605da3b647f07d718623f | <https://github.com/madler/zlib>                             |
 
 #### Directory Setup for using/testing the provided HelloWorld-Example(s)
 
