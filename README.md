@@ -3,7 +3,7 @@
 ##### Current stable build of gRPC v1.50.0 and v1.46.5 (Only requires C++11 support)
 
 ##### Latest release (no pre-releases) gRPC [v1.50.0](https://github.com/grpc/grpc/releases/tag/v1.50.0)
-##### Hotfix branch for v1.46.5 (Only requires C++11 support) gRPC [v1.46.4](https://github.com/grpc/grpc/releases/tag/v1.46.5)
+##### Hotfix branch for v1.46.5 (Only requires C++11 support) gRPC [v1.46.5](https://github.com/grpc/grpc/releases/tag/v1.46.5)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 >
