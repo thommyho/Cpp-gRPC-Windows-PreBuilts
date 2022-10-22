@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.50.0 and v1.46.4
+##### Current stable build of gRPC v1.50.0 and v1.46.5 (Only requires C++11 support)
 
 ##### Latest release (no pre-releases) gRPC [v1.50.0](https://github.com/grpc/grpc/releases/tag/v1.50.0)
 ##### Hotfix branch for v1.46.5 (Only requires C++11 support) gRPC [v1.46.4](https://github.com/grpc/grpc/releases/tag/v1.46.5)
