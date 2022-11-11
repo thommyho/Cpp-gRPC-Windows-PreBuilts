@@ -29,7 +29,7 @@ variables:
 
 
 steps:
- - ${{ if eq(variables['build_Latest']) }}:
+ - ${{ if eq(variables['build_Latest'], True) }}:
    - script: |
       pip install lastversion==2.4.7
    - script: | 
