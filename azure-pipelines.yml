@@ -25,32 +25,28 @@ pool:
 workspace:
       clean: all
 variables:
-    $(build_grpc_version): '1.50.0'
+    $(build_grpc_version): 'latest'
     $(build_configuration): 'Release'
     $(build_architecture): 'x64'
     $(build_toolchain): 'MSVC143'
+
+
 steps:
  - script: |
       pip install lastversion==2.4.7 
+   condition:  ${{ containsValue($(build_grpc_version), 'latest')
    displayName: 'Install pip package last version'
 
-#  - task: DownloadGitHubRelease@0
-#    displayName: 'Chekout: Birko.Data'
-#    inputs:
-#     connection: 'birko-test'
-#     userRepository: 'grpc/grpc'
-#     defaultVersionType: 'latest'
-# steps:
-# - script: |
-#      git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
-#      md _out
-#      md $(build_architecture)_$(build_configuration)
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\lib
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\bin
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\include
-#      dir $(Build.SourcesDirectory)
-#   displayName: '[Git] Checkout Sources'
+ - script: |
+     git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
+     md _out
+     md $(build_architecture)_$(build_configuration)
+     md $(build_architecture)_$(build_configuration)\$(build_toolchain)
+     md $(build_architecture)_$(build_configuration)\$(build_toolchain)\lib
+     md $(build_architecture)_$(build_configuration)\$(build_toolchain)\bin
+     md $(build_architecture)_$(build_configuration)\$(build_toolchain)\include
+     dir $(Build.SourcesDirectory)
+   displayName: '[Git] Checkout Sources'
 
 # - script: |
 #     git submodule update --init --depth=1
