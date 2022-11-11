@@ -31,12 +31,15 @@ workspace:
 steps:
 
  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
-   - script: echo it is true 
+   - script: |
+       pip install lastversion==2.4.7
+       echo "##vso[task.setvariable variable=grpc_version]$(python -m lastversion grpc/grpc)"
+       echo $(grpc_version)
  - ${{ if ne(variables['build_grpc_version'], 'latest') }}:
    - script: echo it is false
 #  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
 #    - script: |
-#       pip install lastversion==2.4.7
+#       
 #    - script: | 
 #       echo "##vso[task.setvariable variable=grpc_version]$(python -m lastversion grpc/grpc)"
 #       echo $(grpc_version)
