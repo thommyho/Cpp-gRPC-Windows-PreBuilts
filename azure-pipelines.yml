@@ -37,6 +37,7 @@ steps:
        echo $(grpc_version)
  - ${{ if ne(variables['build_grpc_version'], 'latest') }}:
    - script: echo it is false
+   - script: echo it is $(build_grpc_version)
 #  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
 #    - script: |
 #       
