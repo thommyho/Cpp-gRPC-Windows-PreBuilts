@@ -30,12 +30,16 @@ variables:
     build_architecture: 'x64'
     build_toolchain: 'MSVC143'
 steps:
- - task: DownloadGitHubRelease@0
-   displayName: 'Chekout: Birko.Data'
-   inputs:
-    connection: 'birko-test'
-    userRepository: 'grpc/grpc'
-    defaultVersionType: 'latest'
+ - script: |
+      pip install lastversion==2.4.7 
+   displayName: 'Install pip package last version'
+
+#  - task: DownloadGitHubRelease@0
+#    displayName: 'Chekout: Birko.Data'
+#    inputs:
+#     connection: 'birko-test'
+#     userRepository: 'grpc/grpc'
+#     defaultVersionType: 'latest'
 # steps:
 # - script: |
 #      git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
