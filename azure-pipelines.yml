@@ -25,10 +25,10 @@ pool:
 workspace:
       clean: all
 variables:
-    build_grpc_version: '1.50.0'
-    build_configuration: 'Release'
-    build_architecture: 'x64'
-    build_toolchain: 'MSVC143'
+    $(build_grpc_version): '1.50.0'
+    $(build_configuration): 'Release'
+    $(build_architecture): 'x64'
+    $(build_toolchain): 'MSVC143'
 steps:
  - script: |
       pip install lastversion==2.4.7 
