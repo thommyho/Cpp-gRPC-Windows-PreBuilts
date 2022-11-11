@@ -34,7 +34,7 @@ variables:
 steps:
  - script: |
       pip install lastversion==2.4.7 
-   condition:  ${{ containsValue($(build_grpc_version), 'latest')}}
+   condition: $[eq(variables['$(build_grpc_version)'], 'latest')]
    displayName: 'Install pip package last version'
 
  - script: |
