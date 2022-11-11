@@ -44,16 +44,16 @@ steps:
 #       echo "##vso[task.setvariable variable=grpc_version]$(python -m lastversion grpc/grpc)"
 #       echo $(grpc_version)
 
- - script: |
-     git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
-     md _out
-     md $(build_architecture)_$(build_configuration)
-     md $(build_architecture)_$(build_configuration)\$(build_toolchain)
-     md $(build_architecture)_$(build_configuration)\$(build_toolchain)\lib
-     md $(build_architecture)_$(build_configuration)\$(build_toolchain)\bin
-     md $(build_architecture)_$(build_configuration)\$(build_toolchain)\include
-     dir $(Build.SourcesDirectory)
-   displayName: '[Git] Checkout Sources'
+#  - script: |
+#      git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
+#      md _out
+#      md $(build_architecture)_$(build_configuration)
+#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)
+#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\lib
+#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\bin
+#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\include
+#      dir $(Build.SourcesDirectory)
+#    displayName: '[Git] Checkout Sources'
 
 # - script: |
 #     git submodule update --init --depth=1
