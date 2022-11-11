@@ -29,12 +29,13 @@ variables:
     build_configuration: 'Release'
     build_architecture: 'x64'
     build_toolchain: 'MSVC143'
+steps:
  - task: DownloadGitHubRelease@0
-    displayName: 'Chekout: Birko.Data'
-    inputs:
-      connection: 'birko-test'
-      userRepository: 'birko/Birko.Data'
-      defaultVersionType: 'latest'
+   displayName: 'Chekout: Birko.Data'
+   inputs:
+    connection: 'birko-test'
+    userRepository: 'birko/Birko.Data'
+    defaultVersionType: 'latest'
 # steps:
 # - script: |
 #      git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
