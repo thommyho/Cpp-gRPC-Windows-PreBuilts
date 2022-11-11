@@ -24,12 +24,12 @@ pool:
   vmImage: windows-2022
 workspace:
       clean: all
-variables:
-     build_Latest: $[eq(variables['build_grpc_version'], 'latest')]
+# variables:
+#      build_Latest: $[eq(variables['build_grpc_version'], 'latest')]
 
 
 steps:
- - ${{ if eq(variables['build_Latest'], true) }}:
+ - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
    - script: |
       pip install lastversion==2.4.7
    - script: | 
