@@ -25,16 +25,18 @@ pool:
 workspace:
       clean: all
 variables:
-    $(build_grpc_version): 'latest'
-    $(build_configuration): 'Release'
-    $(build_architecture): 'x64'
-    $(build_toolchain): 'MSVC143'
+    build_grpc_version: 'latest'
+    build_configuration: 'Release'
+    build_architecture): 'x64'
+    build_toolchain: 'MSVC143'
+    build_Latest: $[eq(variables['build_grpc_version'], 'latest')]
 
 
 steps:
  - script: |
-      pip install lastversion==2.4.7 
-   condition: $[eq(variables['$(build_grpc_version)'], 'latest')]
+      pip install lastversion==2.4.7
+      echo $(build_Latest)
+  #  condition: $[eq(variables['$(build_grpc_version)'], 'latest')]
    displayName: 'Install pip package last version'
 
  - script: |
