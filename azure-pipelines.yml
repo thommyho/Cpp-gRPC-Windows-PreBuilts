@@ -30,11 +30,10 @@ workspace:
 
 steps:
 
-  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
-    - script: echo it is true 
-  - ${{ if ne(variables['build_grpc_version'], 'latest') }}:
-    - script: echo it is false
-
+ - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
+   - script: echo it is true 
+ - ${{ if ne(variables['build_grpc_version'], 'latest') }}:
+   - script: echo it is false
 #  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
 #    - script: |
 #       pip install lastversion==2.4.7
