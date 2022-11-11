@@ -34,7 +34,7 @@ steps:
    displayName: 'Chekout: Birko.Data'
    inputs:
     connection: 'birko-test'
-    userRepository: 'birko/Birko.Data'
+    userRepository: 'grpc/grpc'
     defaultVersionType: 'latest'
 # steps:
 # - script: |
