@@ -24,44 +24,26 @@ pool:
   vmImage: windows-2022
 workspace:
       clean: all
-# variables:
-#      build_Latest: $[eq(variables['build_grpc_version'], 'latest')]
-
 
 steps:
   - script: |
        pip install lastversion==2.4.7
        python -m lastversion get grpc --format json > grpc.json
   - powershell: |
-      Write-Host "##vso[task.setvariable variable=varName;]$(jq .version grpc.json)"
-       ##vso[task.setvariable variable=varName;]$(jq .version grpc.json)
+      Write-Host "##vso[task.setvariable variable=grpc_version;]$(jq .version grpc.json)"
   - script: |
-       echo $(varName)
-#  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
-    
-  # - script: |
-  #     echo $(varName) 
-  # displayName: output value of var
-#  - ${{ if ne(variables['build_grpc_version'], 'latest') }}:
-  #  - script: echo it is false
-  #  - script: echo it is $(build_grpc_version)
-#  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
-#    - script: |
-#       
-#    - script: | 
-#       echo "##vso[task.setvariable variable=grpc_version]$(python -m lastversion grpc/grpc)"
-#       echo $(grpc_version)
+       echo $(grpc_version)
 
-#  - script: |
-#      git clone --depth=1 -b v$(build_grpc_version) https://github.com/grpc/grpc
-#      md _out
-#      md $(build_architecture)_$(build_configuration)
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\lib
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\bin
-#      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\include
-#      dir $(Build.SourcesDirectory)
-#    displayName: '[Git] Checkout Sources'
+  - script: |
+      git clone --depth=1 -b v$(grpc_version) https://github.com/grpc/grpc
+      md _out
+      md $(build_architecture)_$(build_configuration)
+      md $(build_architecture)_$(build_configuration)\$(build_toolchain)
+      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\lib
+      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\bin
+      md $(build_architecture)_$(build_configuration)\$(build_toolchain)\include
+      dir $(Build.SourcesDirectory)
+    displayName: '[Git] Checkout Sources'
 
 # - script: |
 #     git submodule update --init --depth=1
