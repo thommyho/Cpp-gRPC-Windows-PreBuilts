@@ -29,14 +29,14 @@ workspace:
 
 
 steps:
-
- - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
-   - script: |
+  - script: |
        pip install lastversion==2.4.7
        python -m lastversion get grpc --format json > grpc.json
        ##vso[task.setvariable variable=varName;]$(jq .version grpc.json)
-   - script: |
-       echo $(varName) 
+  - script: |
+       echo $(varName)
+#  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
+    
   # - script: |
   #     echo $(varName) 
   # displayName: output value of var
