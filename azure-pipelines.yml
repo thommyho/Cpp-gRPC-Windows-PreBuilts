@@ -32,6 +32,8 @@ steps:
   - script: |
        pip install lastversion==2.4.7
        python -m lastversion get grpc --format json > grpc.json
+  - powershell: |
+      Write-Host "##vso[task.setvariable variable=varName;]$(jq .version grpc.json)"
        ##vso[task.setvariable variable=varName;]$(jq .version grpc.json)
   - script: |
        echo $(varName)
