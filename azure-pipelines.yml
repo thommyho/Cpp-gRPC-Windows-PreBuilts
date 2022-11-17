@@ -33,11 +33,16 @@ steps:
  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
    - script: |
        pip install lastversion==2.4.7
-       echo "##vso[task.setvariable variable=grpc_version]$(python -m lastversion grpc/grpc)"
-       echo $(grpc_version)
+       python -m lastversion get grpc --format json > grpc.json
+       ##vso[task.setvariable variable=varName;]$(jq .version grpc.json)
+   - script: |
+       echo $(varName) 
+  # - script: |
+  #     echo $(varName) 
+  # displayName: output value of var
  - ${{ if ne(variables['build_grpc_version'], 'latest') }}:
-   - script: echo it is false
-   - script: echo it is $(build_grpc_version)
+  #  - script: echo it is false
+  #  - script: echo it is $(build_grpc_version)
 #  - ${{ if eq(variables['build_grpc_version'], 'latest') }}:
 #    - script: |
 #       
