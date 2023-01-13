@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.46.5
+##### Current stable build of gRPC v1.46.6
 
-##### gRPC [v1.46.5](https://github.com/grpc/grpc/releases/tag/v1.46.5)
+##### gRPC [v1.46.6](https://github.com/grpc/grpc/releases/tag/v1.46.6)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.46.5](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.5) | 3f072f44cb8e984c09e1a5fed3d597982b54f92e | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.46.6](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.6) | 18dda3c586b2607d8daead6b97922e59d867bb7d | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -49,7 +49,7 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | protoc-gen-validate   |            | 9da36e59fef2267fc2b1849a05159e3ecdf24f3  | <https://github.com/envoyproxy/protoc-gen-validate>          |
 | re2                   | 2021-09-01 | 8e08f47b11b413302749c0d8b17a1c94777495d5 | <https://github.com/google/re2>                              |
 | xds                   |            | cb28da3451f158a947dfc45090fe92b07b243bc1 | <https://github.com/cncf/xds>                                |
-| zlib                  | v1.2.12    | 21767c654d31d2dccdde4330529775c6c5fd5389 | <https://github.com/madler/zlib>                             |
+| zlib                  |            | 04f42ceca40f73e2978b50e93806c2a18c1281fc | <https://github.com/madler/zlib>                             |
 
 #### Directory Setup for using/testing the provided HelloWorld-Example(s)
 
