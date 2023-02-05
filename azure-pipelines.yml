@@ -25,7 +25,7 @@ pool:
 workspace:
       clean: all
 variables:
-    build_grpc_version: '1.51.1'
+    build_grpc_version: '1.52.0'
     build_configuration: 'Release'
     build_architecture: 'x64'
     build_toolchain: 'MSVC143'
