@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.51.1
+##### Current stable build of gRPC v1.52.0
 
-##### gRPC [v1.51.1](https://github.com/grpc/grpc/releases/tag/v1.51.1)
+##### gRPC [v1.52.0](https://github.com/grpc/grpc/releases/tag/v1.52.0)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.51.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.51.1) | 90ccf24d22b6fc909a1021ebd89fd8c838467d26 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.52.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.52.0) | a3f10052090539cd3e19aa8e04f3bf8eceae2964 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -49,8 +49,8 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | opentelemetry         |            | 60fa8754d890b5c55949a8c68dcfd7ab5c2395df | <https://github.com/open-telemetry/opentelemetry-proto>      |
 | protobuf              |            | 24487dd1045c7f3d64a21f38a3f0c06cc4cf2edb | <https://github.com/google/protobuf>                         |
 | protoc-gen-validate   |            | 9da36e59fef2267fc2b1849a05159e3ecdf24f3  | <https://github.com/envoyproxy/protoc-gen-validate>          |
-| re2                   |            | 5bd613749fd530b576b890283bfb6bc6ea6246cb | <https://github.com/google/re2>                              |
-| xds                   |            | cb28da3451f158a947dfc45090fe92b07b243bc1 | <https://github.com/cncf/xds>                                |
+| re2                   |            | 0c5616df9c0aaa44c9440d87422012423d91c7d1 | <https://github.com/google/re2>                              |
+| xds                   |            | 06c439db220b89134a8a49bad41994560d6537c6 | <https://github.com/cncf/xds>                                |
 | zlib                  |            | cacf7f1d4e3d44d871b605da3b647f07d718623f | <https://github.com/madler/zlib>                             |
 
 #### Directory Setup for using/testing the provided HelloWorld-Example(s)
