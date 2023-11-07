@@ -2,7 +2,7 @@
 
 ##### Current stable build of gRPC v1.59.1
 
-##### gRPC [v1.58.0](https://github.com/grpc/grpc/releases/tag/v1.59.1)
+##### gRPC [v1.59.1](https://github.com/grpc/grpc/releases/tag/v1.59.1)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.59.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.59.1) | 0417b882aa7abc1512f534e56f9cd97c557bb68f | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.59.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.59.1) | 0df9accc5c3478d126742fb84dd7155786dc4f68 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -45,7 +45,7 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | libuv                 |            | 02a9e1be252b623ee032a3137c0b0c94afbe6809 | <https://github.com/libuv/libuv>                             |
 | opencensus-proto      |            | 4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89 | <https://github.com/census-instrumentation/opencensus-proto> |
 | opentelemetry         |            | 60fa8754d890b5c55949a8c68dcfd7ab5c2395df | <https://github.com/open-telemetry/opentelemetry-proto>      |
-| protobuf              |            | 2c5fa078d8e86e5f4bd34e6f4c9ea9e8d7d4d44a | <https://github.com/google/protobuf>                         |
+| protobuf              |            | b2b7a51158418f41cff0520894836c15b1738721 | <https://github.com/google/protobuf>                         |
 | protoc-gen-validate   |            | fab737efbb4b4d03e7c771393708f75594b121e4 | <https://github.com/envoyproxy/protoc-gen-validate>          |
 | re2                   |            | 0c5616df9c0aaa44c9440d87422012423d91c7d1 | <https://github.com/google/re2>                              |
 | xds                   |            | e9ce68804cb4e64cab5a52e3c8baf840d4ff87b7 | <https://github.com/cncf/xds>                                |
