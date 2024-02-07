@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.60.0
+##### Current stable build of gRPC v1.61.0
 
-##### gRPC [v1.60.0](https://github.com/grpc/grpc/releases/tag/v1.60.0)
+##### gRPC [v1.61.0](https://github.com/grpc/grpc/releases/tag/v1.61.0)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.60.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.60.0) | 0ef13a7555dbaadd4633399242524129eef5e231 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.61.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.61.0) | a13178cb2537822bcdc552faba98fd9fa3c35b3e | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -35,7 +35,7 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | Third Party Component | Version    | Commit                                   | Link                                                         |
 |-----------------------|------------|------------------------------------------|--------------------------------------------------------------|
 | abseil-cpp            |            | 29bf8085f3bf17b84d30e34b3d7ff8248fda404e | <https://github.com/abseil/abseil-cpp>                       |
-| benchmark             |            | 015d1a091af6937488242b70121858bce8fd40e9 | <https://github.com/google/benchmark>                        |
+| benchmark             |            | 344117638c8ff7e239044fd0fa7085839fc03021 | <https://github.com/google/benchmark>                        |
 | bloaty                |            | 60209eb1ccc34d5deefb002d1b7f37545204f7f2 | <https://github.com/google/bloaty>                           |
 | boringssl-with-bazel  |            | 2ff4b968a7e0cfee66d9f151cb95635b43dc1d5b | <https://github.com/google/boringssl>                        |
 | cares                 |            | 6360e96b5cf8e5980c887ce58ef727e53d77243a | <https://github.com/c-ares/c-ares>                           |
@@ -45,11 +45,11 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 | libuv                 |            | 02a9e1be252b623ee032a3137c0b0c94afbe6809 | <https://github.com/libuv/libuv>                             |
 | opencensus-proto      |            | 4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89 | <https://github.com/census-instrumentation/opencensus-proto> |
 | opentelemetry         |            | 60fa8754d890b5c55949a8c68dcfd7ab5c2395df | <https://github.com/open-telemetry/opentelemetry-proto>      |
-| protobuf              |            | 6b5d8db01fe47478e8d400f550e797e6230d464e | <https://github.com/google/protobuf>                         |
+| protobuf              |            | 7f94235e552599141950d7a4a3eaf93bc87d1b22 | <https://github.com/google/protobuf>                         |
 | protoc-gen-validate   |            | fab737efbb4b4d03e7c771393708f75594b121e4 | <https://github.com/envoyproxy/protoc-gen-validate>          |
 | re2                   |            | 0c5616df9c0aaa44c9440d87422012423d91c7d1 | <https://github.com/google/re2>                              |
 | xds                   |            | e9ce68804cb4e64cab5a52e3c8baf840d4ff87b7 | <https://github.com/cncf/xds>                                |
-| zlib                  |            | cacf7f1d4e3d44d871b605da3b647f07d718623f | <https://github.com/madler/zlib>                             |
+| zlib                  |            | 09155eaa2f9270dc4ed1fa13e2b4b2613e6e4851 | <https://github.com/madler/zlib>                             |
 
 #### Directory Setup for using/testing the provided HelloWorld-Example(s)
 
