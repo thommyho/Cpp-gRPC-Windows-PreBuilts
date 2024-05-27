@@ -2,7 +2,7 @@
 
 ##### Current stable build of gRPC v1.63.0
 
-##### gRPC [v1.62.1](https://github.com/grpc/grpc/releases/tag/v1.63.0)
+##### gRPC [v1.63.0](https://github.com/grpc/grpc/releases/tag/v1.63.0)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
