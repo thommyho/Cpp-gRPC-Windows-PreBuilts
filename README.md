@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.63.0
+##### Current stable build of gRPC v1.64.0
 
-##### gRPC [v1.62.1](https://github.com/grpc/grpc/releases/tag/v1.63.0)
+##### gRPC [v1.64.0](https://github.com/grpc/grpc/releases/tag/v1.64.0)
 
 > They can be downloaded separately as zip archives from the  [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                 | Commit                                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |-------------------------------------------------------------------------|------------------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [1.63.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.63.0) | ac1418547838ab067a02af4402046f7bc1cbc44c | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [1.64.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.64.0) | b8a04acbbf18fd1c805e5d53d62ed9fa4721a4d1 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -34,10 +34,10 @@ Examples included. Tested with VS2019, VS2022 Enterprise and msvc142, msvc143 (W
 
 | Third Party Component | Version    | Commit                                   | Link                                                         |
 |-----------------------|------------|------------------------------------------|--------------------------------------------------------------|
-| abseil-cpp            |            | 4a2c63365eff8823a5221db86ef490e828306f9d | <https://github.com/abseil/abseil-cpp>                       |
+| abseil-cpp            |            | 78be63686ba732b25052be15f8d6dee891c05749 | <https://github.com/abseil/abseil-cpp>                       |
 | benchmark             |            | 344117638c8ff7e239044fd0fa7085839fc03021 | <https://github.com/google/benchmark>                        |
 | bloaty                |            | 60209eb1ccc34d5deefb002d1b7f37545204f7f2 | <https://github.com/google/bloaty>                           |
-| boringssl-with-bazel  |            | e14d29f68c2d1b02e06f10c83b9b8ea4d061f8df | <https://github.com/google/boringssl>                        |
+| boringssl-with-bazel  |            | 5a2bca2124800f2861263959b72bc35cdf18949b | <https://github.com/google/boringssl>                        |
 | cares                 |            | 6360e96b5cf8e5980c887ce58ef727e53d77243a | <https://github.com/c-ares/c-ares>                           |
 | envoy-api             |            | 78f198cf96ecdc7120ef640406770aa01af775c4 | <https://github.com/envoyproxy/data-plane-api>               |
 | googleapis            |            | 2f9af297c84c55c8b871ba4495e01ade42476c92 | <https://github.com/googleapis/googleapis>                   |
