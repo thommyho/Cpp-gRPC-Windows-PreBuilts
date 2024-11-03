@@ -1,8 +1,8 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.67.0
+##### Current stable build of gRPC v1.67.1
 
-##### gRPC [v1.67.0](https://github.com/grpc/grpc/releases/tag/v1.67.0)
+##### gRPC [v1.67.1](https://github.com/grpc/grpc/releases/tag/v1.67.1)
 
 > They can be downloaded separately as zip archives from the [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
@@ -10,7 +10,7 @@
 
 | Version                                                                  | Commit                                   | Commit-Date                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
 |--------------------------------------------------------------------------|------------------------------------------|-------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [v1.67.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.67.0) | 74f245857247b4b3e28a753d85d06ae2d5a55434 | Tue Oct 8 11:10:10 2024 -0700 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| [v1.67.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.67.1) | d3286610f703a339149c3f9be69f0d7d0abb130a | Fri Nov 1 15:48:28 2024 -0700 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
@@ -46,7 +46,7 @@ Examples included. Tested with msvc142, msvc143 (Win 10, SDK 10.0)
 | opentelemetry         |         | 60fa8754d890b5c55949a8c68dcfd7ab5c2395df | <https://github.com/open-telemetry/opentelemetry-proto.git>      | Fri Jul 30 08:27:50 2021 +0400 |
 | opentelemetry-cpp     |         | 4bd64c9a336fd438d6c4c9dad2e6b61b0585311f | <https://github.com/open-telemetry/opentelemetry-cpp>            | Wed Dec 6 20:39:21 2023 +0100  |
 | protobuf              |         | 10ef3f77683f77fb3c059bf47725c27b3ff41e63 | <https://github.com/protocolbuffers/protobuf.git>                | Tue Sep 10 13:36:10 2024 -0700 |
-| protoc-gen-validate   |         | fab737efbb4b4d03e7c771393708f75594b121e4 | <https://github.com/envoyproxy/protoc-gen-validate.git>          | Fri Jun 23 11:41:29 2023 -0700 |
+| protoc-gen-validate   |         | 32c2415389a3538082507ae537e7edd9578c64ed | <https://github.com/envoyproxy/protoc-gen-validate.git>          | Tue Jan 16 14:01:04 2024 -0800 |
 | re2                   |         | 0c5616df9c0aaa44c9440d87422012423d91c7d1 | <https://github.com/google/re2.git>                              | Wed Mar 30 18:41:25 2022 +0000 |
 | xds                   |         | 3a472e524827f72d1ad621c4983dd5af54c46776 | <https://github.com/cncf/xds.git>                                | Thu Nov 16 09:28:03 2023 -0500 |
 | zlib                  |         | 09155eaa2f9270dc4ed1fa13e2b4b2613e6e4851 | <https://github.com/madler/zlib>                                 | Fri Aug 18 01:45:36 2023 -0700 |
