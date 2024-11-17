@@ -1,16 +1,16 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.67.1
+##### Current stable build of gRPC v1.68.0
 
-##### gRPC [v1.67.1](https://github.com/grpc/grpc/releases/tag/v1.67.1)
+##### gRPC [v1.68.0](https://github.com/grpc/grpc/releases/tag/v1.68.0)
 
 > They can be downloaded separately as zip archives from the [releases](https://github.com/thommyho/gRPC_windows/releases) page
 
 ##### Releases
 
-| Version                                                                  | Commit                                   | Commit-Date                   | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
-|--------------------------------------------------------------------------|------------------------------------------|-------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| [v1.67.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.67.1) | d3286610f703a339149c3f9be69f0d7d0abb130a | Fri Nov 1 15:48:28 2024 -0700 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
+| Version                                                                  | Commit                                   | Commit-Date                    | Debug                   | Release                 | RelWithDebInfo          | MSVC143 32Bit           | MSVC143 64Bit           | MSVC142 32 Bit          | MSVC142 64 Bit          | Example                 |
+|--------------------------------------------------------------------------|------------------------------------------|--------------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
+| [v1.68.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.68.0) | 6b49ae626bc9cd7033e062f89dbe0e0576b1110e | Sat Nov 16 22:10:43 2024 -0800 | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: | :ballot_box_with_check: |
 
 Build instructions from here: <https://github.com/grpc/grpc/blob/master/BUILDING.md>
 
