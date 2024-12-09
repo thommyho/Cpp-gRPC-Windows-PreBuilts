@@ -21,8 +21,6 @@ Examples included. Tested with msvc142, msvc143 (Win 10, SDK 10.0)
 | Operating System | SDK Version                                       |
 | ---------------- | ------------------------------------------------- |
 | Windows          | 10.0.22631                                        |
-| Processor        | AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD |
-| Architecture     | AMD64                                             |
 
 #### Build Tools
 
