@@ -10,12 +10,12 @@ steps:
 - task: DownloadSecureFile@1
   name: FetchSSHKey
   inputs:
-    secureFile: 'id_ed25519.pub'  # The name of your SSH private key file
+    secureFile: 'id_rsa'  # The name of your SSH private key file
 
 - script: |
     mkdir -p ~/.ssh
-    cp $(FetchSSHKey.secureFilePath) ~/.ssh/id_ed25519.pub
-    chmod 600 ~/.ssh/id_ed25519.pub
+    cp $(FetchSSHKey.secureFilePath) ~/.ssh/id_rsa
+    chmod 600 ~/.ssh/id_rsa
     ssh-keyscan github.com >> ~/.ssh/known_hosts  # Add GitHub to known hosts
   displayName: Setup SSH Key for GitHub
 
