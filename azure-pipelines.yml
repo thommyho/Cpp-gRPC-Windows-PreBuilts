@@ -37,9 +37,15 @@ steps:
 #  inputs:
 #    targetType: 'inline'
 #    script: 'echo ''##vso[task.prependpath]C:\Program Files\NASM\'''
+#- script: |
+#   echo '##vso[task.prependpath]C:\Program Files\NASM'
+
+##### Works
 - task: CmdLine@2
   inputs:
     script: 'echo ##vso[task.prependpath]C:\Program Files\NASM\'
+######
+
 # Verify NASM installation
 - script: |
     echo "Updated PATH: %PATH%"
