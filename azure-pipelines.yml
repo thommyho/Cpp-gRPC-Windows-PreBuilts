@@ -13,4 +13,8 @@ steps:
     python -m pip install git+https://github.com/thommyho/gci-cli.git
   displayName: Install gci-cli from Private GitHub Repository
   env:
-    GITHUB_PAT: $(GITHUB_PAT)  
+    GITHUB_PAT: $(GITHUB_PAT)
+- script:  |
+    gci version
+    gci-cli version
+  displayName: Test version of gci
