@@ -31,6 +31,7 @@ steps:
 
 # Add NASM to PATH explicitly
 - script: |
+    dir "C:\Program Files\NASM\"
     Write-Host "##vso[task.prependpath]C:\Program Files\NASM\"
   displayName: Add NASM to PATH
 
