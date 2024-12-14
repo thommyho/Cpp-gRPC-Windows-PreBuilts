@@ -53,5 +53,5 @@ steps:
   displayName: 'Archive and publish to Azure'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: gRPC
+    ArtifactName: $(Build.SourcesDirectory)/_info
 
