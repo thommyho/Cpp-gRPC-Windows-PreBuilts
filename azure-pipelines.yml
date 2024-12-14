@@ -13,9 +13,6 @@ steps:
     secureFile: 'id_rsa'  # The name of your SSH private key file
 
 - script: |
-    echo "Setting up SSH key for GitHub"
-
-    # Create SSH directory if it doesn't exist
     if (!(Test-Path -Path "$env:USERPROFILE\.ssh")) {
       New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.ssh"
     }
