@@ -33,7 +33,10 @@ steps:
 - script: |
     dir "C:\Program Files\NASM\"
   displayName: Add NASM to PATH
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'echo ''##vso[task.prependpath]C:\Program Files\NASM\'''
 - task: CmdLine@2
   inputs:
     script: 'echo "##vso[task.prependpath]C:\Program Files\NASM\"'
