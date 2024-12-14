@@ -11,4 +11,6 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     python -m pip install git+https://github.com/thommyho/gci-cli.git
-  displayName: Install gci-cli from GitHub
+  displayName: Install gci-cli from Private GitHub Repository
+  env:
+    GITHUB_PAT: $(GITHUB_PAT)  
