@@ -28,10 +28,11 @@ steps:
 - script: |
     where choco
     choco install nasm -y --verbose
+#  Add NASM to path
+- script: |
+    echo "##vso[task.prependpath]C:\Program Files\NASM"
   displayName: Install NASM
 - script: |
-    dir "C:\Program Files\NASM"
-    $env:Path += ";C:\Program Files\NASM"  # Ensure the path is set for this step
     nasm --version
   displayName: Smoke test nasm compiler
 # Step to install Python package from GitHub
