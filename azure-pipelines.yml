@@ -32,9 +32,11 @@ steps:
 # Add NASM to PATH explicitly
 - script: |
     dir "C:\Program Files\NASM\"
-    Write-Host "##vso[task.prependpath]C:\Program Files\NASM\"
   displayName: Add NASM to PATH
 
+- task: CmdLine@2
+  inputs:
+    script: 'echo "##vso[task.prependpath]C:\Program Files\NASM\"'
 # Verify NASM installation
 - script: |
     echo "Updated PATH: %PATH%"
