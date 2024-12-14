@@ -33,12 +33,6 @@ steps:
 - script: |
     dir "C:\Program Files\NASM\"
   displayName: Add NASM to PATH
-#- task: Bash@3
-#  inputs:
-#    targetType: 'inline'
-#    script: 'echo ''##vso[task.prependpath]C:\Program Files\NASM\'''
-#- script: |
-#   echo '##vso[task.prependpath]C:\Program Files\NASM'
 
 ##### Works
 - task: CmdLine@2
@@ -48,53 +42,49 @@ steps:
 
 # Verify NASM installation
 - script: |
-    echo "Updated PATH: %PATH%"
-    where nasm
     nasm --version
   displayName: Verify NASM Installation
-# Install NASM using Chocolatey
-#- script: |
-#    where choco
-#    choco install nasm -y --verbose
-#  Add NASM to path
-#- script: |
-#    echo "##vso[task.prependpath]C:\Program Files\NASM"
-#  displayName: Install NASM
-#- script: |
-#    nasm --version
-#  displayName: Smoke test nasm compiler
-# Step to install Python package from GitHub
 - script: |
     python -m pip install --upgrade pip    
     python -m pip install git+https://$(GITHUB_USER):$(GITHUB_PAT)@github.com/$(GITHUB_USER)/gci-cli.git@develop
   displayName: Install gci-cli from Private GitHub Repository (Develop Branch)
 - script:  |
     gci version
-  displayName: Smoke test of gci
+  displayName: Verify gci Installation
 # Prepare fetching information
 - script: |
-      md _info
-  displayName: 'Create Subdirectory _info'
+      md _build
+      md _build/build
+      md _build/install
+  displayName: Create Subdirectories
 
 - script:  |
     gci platform generate-tools-info
-    gci-cli release generate-repository-info --latest
-  workingDirectory: $(Build.SourcesDirectory)/_info
+#   gci-cli release generate-repository-info --latest
+  workingDirectory: $(Build.SourcesDirectory)/_build
+  displayName: Generate platform information from host
 
 - script:  |
-    echo $(Build.SourcesDirectory)
     dir $(Build.SourcesDirectory)
-    $(Build.SourcesDirectory)_info
+    dir $(Build.SourcesDirectory)/_build
     dir .
-  workingDirectory:
+  displayName: Verfify (debug print) directory structure
+
+#### Clone stage
+- script:  |
+    gci gci clone source
+    gci-cli build -c $(Build.SourcesDirectory)/_build/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json 
+  workingDirectory: $(Build.SourcesDirectory)/_build
+  displayName: Clone the gRPC in target version
+
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.SourcesDirectory)/_info'
-    artifact: 'repo_info'
+    targetPath: '$(Build.SourcesDirectory)/_build/build'
+    artifact: 'packages'
     publishLocation: 'pipeline'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+#- task: PublishBuildArtifacts@1
+#  inputs:
+#    PathtoPublish: '$(Build.SourcesDirectory)'
+#    ArtifactName: 'drop'
+#    publishLocation: 'Container'
 
