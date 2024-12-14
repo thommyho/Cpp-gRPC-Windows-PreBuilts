@@ -72,8 +72,8 @@ steps:
 #### Clone stage
 - script:  |
     dir .
-    gci clone --target source
-    gci build -c $(Build.SourcesDirectory)/_build/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json 
+    gci clone --target $(Build.SourcesDirectory)/_build/source
+    gci build -c $(Build.SourcesDirectory)/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json 
   workingDirectory: $(Build.SourcesDirectory)/_build
   displayName: Clone the gRPC in target version
 
