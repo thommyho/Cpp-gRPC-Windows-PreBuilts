@@ -1,0 +1,13 @@
+{
+    "toolchain": [
+        "MSVC143_64"
+    ],
+    "build_type": [
+        "RelWithDebInfo"
+    ],
+    "build_out_dir": "ignored_for_remote_build",
+    "build_source_dir": "ignored_for_remote_build",
+    "build_install_dir": "ignored_for_remote_build",
+    "build_cores": 2,
+    "version": "v1.68.2"
+}
