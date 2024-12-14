@@ -76,9 +76,9 @@ steps:
       md _info
   displayName: 'Create Subdirectory _info'
 
-# gci-cli release generate-repository-info --latest
 - script:  |
     gci platform generate-tools-info
+    gci-cli release generate-repository-info --latest
   workingDirectory: $(Build.SourcesDirectory)/_info
 
 - script:  |
