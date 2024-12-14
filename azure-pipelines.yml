@@ -76,14 +76,25 @@ steps:
       md _info
   displayName: 'Create Subdirectory _info'
 
+# gci-cli release generate-repository-info --latest
 - script:  |
     gci platform generate-tools-info
-    gci-cli release generate-repository-info --latest
   workingDirectory: $(Build.SourcesDirectory)/_info
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Archive and publish to Azure'
+- script:  |
+    echo $(Build.SourcesDirectory)
+    dir $(Build.SourcesDirectory)
+    $(Build.SourcesDirectory)_info
+    dir .
+  workingDirectory:
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: $(Build.SourcesDirectory)/_info
+    targetPath: '$(Build.SourcesDirectory)/_info'
+    artifact: 'repo_info'
+    publishLocation: 'pipeline'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 
