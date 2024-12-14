@@ -30,12 +30,8 @@ steps:
     choco install nasm -y --verbose
   displayName: Install NASM
 - script: |
-    dir C:\
-    dir C:\Users
-    dir C:\Users\VssAdministrator\AppData\Local\bin\NASM
-    dir "C:\Program Files"
-    dir "C:\Program Files (x86)"
-    $env:Path += ";C:\Users\VssAdministrator\AppData\Local\bin\NASM"  # Ensure the path is set for this step
+    dir "C:\Program Files\NASM"
+    $env:Path += ";C:\Program Files\NASM"  # Ensure the path is set for this step
     nasm --version
   displayName: Smoke test nasm compiler
 # Step to install Python package from GitHub
