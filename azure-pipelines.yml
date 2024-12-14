@@ -1,26 +1,14 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-# Steps toDo:
-# 
-# Trigger-Events
-# (o) on new tags
-# Required Build-Tooling
-# (x) Visual Studio 2022(x) with C++ packages installed
-# (x) New enough CMake
-# (o) NASM compiler
-# (o) Golang compiler
-# (o) Apply fixes
-# (o) Build Test-Package
-# (o) Build Release-Package
-# (o) Update Documentation
-
 trigger:
-- master
+- testing
 
 pool:
   vmImage: windows-2022
 workspace:
       clean: all
+
+steps:
+# Step to install Python package from GitHub
+- script: |
+    python -m pip install --upgrade pip
+    python -m pip install git+https://github.com/thommyho/gci-cli.git
+  displayName: Install gci-cli from GitHub
