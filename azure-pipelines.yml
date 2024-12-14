@@ -10,11 +10,8 @@ steps:
 # Step to install Python package from GitHub
 - script: |
     python -m pip install --upgrade pip    
-    python -m pip install git+https://${GITHUB_USER}:${GITHUB_PAT}@github.com/thommyho/gci-cli.git@develop
+    python -m pip install git+https://$(GITHUB_USER):$(GITHUB_PAT)@github.com/$(GITHUB_USER)/gci-cli.git@develop
   displayName: Install gci-cli from Private GitHub Repository (Develop Branch)
-  env:
-    GITHUB_PAT: $(GITHUB_PAT)
-    GITHUB_USER: $(GITHUB_USER)
 - script:  |
     gci version
     gci-cli version
