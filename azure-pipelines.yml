@@ -69,16 +69,11 @@ steps:
   workingDirectory: $(Build.SourcesDirectory)/_build
   displayName: Generate platform information from host
 
-- script:  |
-    dir $(Build.SourcesDirectory)
-    dir $(Build.SourcesDirectory)/_build
-    dir .
-  displayName: Verfify (debug print) directory structure
-
 #### Clone stage
 - script:  |
-    gci gci clone source
-    gci-cli build -c $(Build.SourcesDirectory)/_build/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json 
+    dir .
+    gci clone source
+    gci build -c $(Build.SourcesDirectory)/_build/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json 
   workingDirectory: $(Build.SourcesDirectory)/_build
   displayName: Clone the gRPC in target version
 
