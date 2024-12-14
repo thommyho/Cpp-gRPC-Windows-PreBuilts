@@ -1,4 +1,5 @@
 [![Build Status](https://dev.azure.com/thomashochstrasser/Prebuilt-Packages/_apis/build/status%2Fthommyho.Cpp-gRPC-Windows-PreBuilts?branchName=master)](https://dev.azure.com/thomashochstrasser/Prebuilt-Packages/_build/latest?definitionId=1&branchName=master)
+
 # Prebuilt Binaries for gRPC C++ on Windows
 
 ### Overview
