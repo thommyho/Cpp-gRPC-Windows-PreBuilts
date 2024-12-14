@@ -27,9 +27,11 @@ steps:
 # Install NASM using Chocolatey
 - script: |
     where choco
-    choco install nasm -y
+    choco install nasm -y --verbose
   displayName: Install NASM
 - script: |
+    dir C:\
+    dir C:\Users
     $env:Path += ";C:\Program Files\NASM"  # Ensure the path is set for this step
     nasm --version
   displayName: Smoke test nasm compiler
