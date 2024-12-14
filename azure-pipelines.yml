@@ -76,6 +76,8 @@ steps:
     gci build -c $(Build.SourcesDirectory)/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json --progress
   workingDirectory: $(Build.SourcesDirectory)/_build
   displayName: Clone the gRPC in target version
+  timeoutInMinutes: 0
+
 
 - task: PublishPipelineArtifact@1
   inputs:
