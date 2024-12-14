@@ -26,9 +26,11 @@ steps:
 
 # Install NASM using Chocolatey
 - script: |
+    where choco
     choco install nasm -y
   displayName: Install NASM
 - script: |
+    $env:Path += ";C:\Program Files\NASM"  # Ensure the path is set for this step
     nasm --version
   displayName: Smoke test nasm compiler
 # Step to install Python package from GitHub
@@ -45,6 +47,7 @@ steps:
   displayName: 'Create Subdirectory _info'
 
 - script:  |
+    $env:Path += ";C:\Program Files\NASM"  # Ensure the path is set for this step
     gci platform generate-tools-info
     gci-cli release generate-repository-info --latest
   workingDirectory: $(Build.SourcesDirectory)/_info
