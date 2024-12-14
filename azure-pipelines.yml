@@ -13,11 +13,28 @@ steps:
     secureFile: 'id_rsa'  # The name of your SSH private key file
 
 - script: |
-    mkdir -p ~/.ssh
-    cp $(FetchSSHKey.secureFilePath) ~/.ssh/id_rsa
-    chmod 600 ~/.ssh/id_rsa
-    ssh-keyscan github.com >> ~/.ssh/known_hosts  # Add GitHub to known hosts
-  displayName: Setup SSH Key for GitHub
+    echo "Setting up SSH key for GitHub"
+
+    # Create SSH directory if it doesn't exist
+    if (!(Test-Path -Path "$env:USERPROFILE\.ssh")) {
+      New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.ssh"
+    }
+
+    # Copy SSH private key to the .ssh directory
+    Copy-Item -Path "$(FetchSSHKey.secureFilePath)" -Destination "$env:USERPROFILE\.ssh\id_rsa" -Force
+
+    # Set file permissions (Windows doesn't use chmod, but it's good practice)
+    # Ensure the private key is readable only by the user
+    $acl = Get-Acl "$env:USERPROFILE\.ssh\id_rsa"
+    $acl.SetAccessRuleProtection($true, $false)  # Disable inheritance, keep existing permissions
+    Set-Acl -Path "$env:USERPROFILE\.ssh\id_rsa" -AclObject $acl
+
+    # Add GitHub to known hosts to avoid SSH key verification issues
+    ssh-keyscan github.com >> "$env:USERPROFILE\.ssh\known_hosts"
+    
+    # Start the SSH agent and add the key
+    Start-Process ssh-agent -ArgumentList "bash -c 'ssh-add $env:USERPROFILE\.ssh\id_rsa'" -NoNewWindow -Wait
+  displayName: Setup SSH Key for GitHub on Windows
 
 # Step to install Python package from GitHub
 - script: |
