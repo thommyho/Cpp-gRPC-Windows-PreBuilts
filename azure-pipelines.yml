@@ -7,6 +7,18 @@ workspace:
       clean: all
 
 steps:
+- task: DownloadSecureFile@1
+  name: FetchSSHKey
+  inputs:
+    secureFile: 'id_ed25519.pub'  # The name of your SSH private key file
+
+- script: |
+    mkdir -p ~/.ssh
+    cp $(FetchSSHKey.secureFilePath) ~/.ssh/id_ed25519.pub
+    chmod 600 ~/.ssh/id_ed25519.pub
+    ssh-keyscan github.com >> ~/.ssh/known_hosts  # Add GitHub to known hosts
+  displayName: Setup SSH Key for GitHub
+
 # Step to install Python package from GitHub
 - script: |
     python -m pip install --upgrade pip    
