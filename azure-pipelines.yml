@@ -54,9 +54,14 @@ steps:
 # Prepare fetching information
 - script: |
       md _build
-      md _build/build
-      md _build/install
-  displayName: Create Subdirectories
+  workingDirectory: $(Build.SourcesDirectory)
+  displayName: Create dir _build
+  
+- script: |
+      md build
+      md install
+  displayName: Create dirs build and install
+  workingDirectory: $(Build.SourcesDirectory)/_build
 
 - script:  |
     gci platform generate-tools-info
