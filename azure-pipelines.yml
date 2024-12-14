@@ -63,17 +63,17 @@ steps:
   displayName: Create dirs build and install
   workingDirectory: $(Build.SourcesDirectory)/_build
 
+#### Build platform and repository information
 - script:  |
     gci platform generate-tools-info
-#   gci-cli release generate-repository-info --latest
+    gci-cli release generate-repository-info --directory source --latest
   workingDirectory: $(Build.SourcesDirectory)/_build
   displayName: Generate platform information from host
 
-#### Clone stage
+#gci clone --target $(Build.SourcesDirectory)/_build/source 
 - script:  |
     dir .
-    gci clone --target $(Build.SourcesDirectory)/_build/source
-    gci build -c $(Build.SourcesDirectory)/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json 
+    gci build -c $(Build.SourcesDirectory)/build_config.json -s $(Build.SourcesDirectory)/_build/source -b $(Build.SourcesDirectory)/_build/build -i $(Build.SourcesDirectory)/_build/install -pi $(Build.SourcesDirectory)/_build/platform.json
   workingDirectory: $(Build.SourcesDirectory)/_build
   displayName: Clone the gRPC in target version
 
