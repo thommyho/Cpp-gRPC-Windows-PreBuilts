@@ -31,5 +31,20 @@ steps:
   displayName: Install gci-cli from Private GitHub Repository (Develop Branch)
 - script:  |
     gci version
-    gci-cli version
-  displayName: Test version of gci
+  displayName: Smoke test of gci
+# Prepare fetching information
+- script: |
+      md _info
+  displayName: 'Create Subdirectory _info'
+
+- script:  |
+    gci platform generate-tools-info
+    gci-cli release generate-repository-info --latest
+  workingDirectory: $(Build.SourcesDirectory)/_info
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Archive and publish to Azure'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: gRPC
+
