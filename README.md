@@ -6,7 +6,7 @@ Prebuilt binaries for gRPC C++ are available for:
 
 - **Stable build**: [v1.69.0](https://github.com/grpc/grpc/releases/tag/v1.69.0)
 
-Go to release page for downlading the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.69.0) ⬅️.
+Go to release page for downloading the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.69.0) ⬅️.
 
 > [!IMPORTANT]
 > From gRPC C++ **v1.47.0** is the first release requiring C++14.
