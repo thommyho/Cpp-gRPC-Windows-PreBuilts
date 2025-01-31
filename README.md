@@ -4,6 +4,10 @@
 
 Prebuilt binaries for gRPC C++ are available for:
 
+> [!IMPORTANT]
+> Skipping 1.70.0 for now, due to issue building the library. A ticket has been created
+> https://github.com/grpc/grpc/issues/38606
+
 - **Stable build**: [v1.69.0](https://github.com/grpc/grpc/releases/tag/v1.69.0)
 
 Go to release page for downloading the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.69.0) ⬅️.
