@@ -1,8 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-##### Current stable build of gRPC v1.69.0
-
-##### gRPC [v1.69.0](https://github.com/grpc/grpc/releases/tag/v1.69.0)
+### gRPC [v1.70.0](https://github.com/grpc/grpc/releases/tag/v1.70.0)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -22,7 +20,7 @@ ______________________________________________________________________
 
 | Version                                                                  | Commit                                                                                  | Commit-Date                | Build Configurations                        | Compiler Set                                                         | Example |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.69.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.69.0) | [b4ef7c1](https://github.com/grpc/grpc/commit/b4ef7c141d960be62e0008601261bb22cecb5d40) | Tuesday, December 24, 2024 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| [v1.70.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.70.0) | [93571f6](https://github.com/grpc/grpc/commit/93571f6142f823167d54bc1169fed567b2407d94) | Thursday, January 23, 2025 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
@@ -47,20 +45,20 @@ ______________________________________________________________________
 
 #### Information about Build system and Tools
 
-| Operating System | SDK Version                                         |
-| ---------------- | --------------------------------------------------- |
-| Windows          | 10.0.19042                                          |
-| Processor        | Intel64 Family 6 Model 142 Stepping 9, GenuineIntel |
-| Architecture     | AMD64                                               |
+| Operating System | SDK Version                                       |
+| ---------------- | ------------------------------------------------- |
+| Windows          | 10.0.22621                                        |
+| Processor        | AMD64 Family 23 Model 17 Stepping 0, AuthenticAMD |
+| Architecture     | AMD64                                             |
 
 #### Build Tools
 
 | Build Tool | Version |
 | ---------- | ------- |
-| git        | 2.30.2  |
-| cmake      | 3.23.1  |
-| nasm       | 2.15.05 |
-| golang     | 1.23.1  |
+| git        | 2.47.0  |
+| cmake      | 3.31.3  |
+| nasm       | 2.16.03 |
+| golang     | 1.23.5  |
 
 #### Visual Studio Versions and Compiler Sets
 
@@ -68,28 +66,27 @@ ______________________________________________________________________
 | --------------------- | --------------------- |
 | 2022                  | 14.42.34433           |
 | 2019                  | 14.29.30133           |
-| 2017                  | 14.16.27023           |
 
 #### gRPC c++ Third Party Components
 
-| Third Party Component | Version      | Commit                                                                                                                    | Link                                                                               | Timestamp                   |
-| --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------- |
-| abseil-cpp            | 20240722.0   | [4447c75](https://github.com/abseil/abseil-cpp.git/commit/4447c7562e3bc702ade25105912dce503f0c4010)                       | [abseil-cpp](https://github.com/abseil/abseil-cpp.git)                             | Thursday, August 01, 2024   |
-| benchmark             | v1.9.0       | [12235e2](https://github.com/google/benchmark/commit/12235e24652fc7f809373e7c11a5f73c5763fc4c)                            | [benchmark](https://github.com/google/benchmark)                                   | Friday, August 16, 2024     |
-| bloaty                | No tag       | [60209eb](https://github.com/google/bloaty.git/commit/60209eb1ccc34d5deefb002d1b7f37545204f7f2)                           | [bloaty](https://github.com/google/bloaty.git)                                     | Monday, August 16, 2021     |
-| boringssl-with-bazel  | No tag       | [b8b3e6e](https://github.com/google/boringssl.git/commit/b8b3e6e11166719a8ebfa43c0cde9ad7d57a84f6)                        | [boringssl-with-bazel](https://github.com/google/boringssl.git)                    | Tuesday, September 03, 2024 |
-| cares/cares           | cares-1_19_1 | [6360e96](https://github.com/c-ares/c-ares.git/commit/6360e96b5cf8e5980c887ce58ef727e53d77243a)                           | [cares/cares](https://github.com/c-ares/c-ares.git)                                | Monday, May 22, 2023        |
-| envoy-api             | No tag       | [f8b75d1](https://github.com/envoyproxy/data-plane-api.git/commit/f8b75d1efa92bbf534596a013d9ca5873f79dd30)               | [envoy-api](https://github.com/envoyproxy/data-plane-api.git)                      | Friday, July 19, 2024       |
-| googleapis            | No tag       | [fe8ba05](https://github.com/googleapis/googleapis.git/commit/fe8ba054ad4f7eca946c2d14a63c3f07c0b586a0)                   | [googleapis](https://github.com/googleapis/googleapis.git)                         | Monday, August 19, 2024     |
-| googletest            | v1.15.0      | [2dd1c13](https://github.com/google/googletest.git/commit/2dd1c131950043a8ad5ab0d2dda0e0970596586a)                       | [googletest](https://github.com/google/googletest.git)                             | Friday, October 06, 2023    |
-| opencensus-proto      | v0.3.0       | [4aa53e1](https://github.com/census-instrumentation/opencensus-proto.git/commit/4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89) | [opencensus-proto](https://github.com/census-instrumentation/opencensus-proto.git) | Monday, July 20, 2020       |
-| opentelemetry         | v0.10.0      | [60fa875](https://github.com/open-telemetry/opentelemetry-proto.git/commit/60fa8754d890b5c55949a8c68dcfd7ab5c2395df)      | [opentelemetry](https://github.com/open-telemetry/opentelemetry-proto.git)         | Friday, July 30, 2021       |
-| protobuf              | v3.29.0      | [2d4414f](https://github.com/protocolbuffers/protobuf.git/commit/2d4414f384dc499af113b5991ce3eaa9df6dd931)                | [protobuf](https://github.com/protocolbuffers/protobuf.git)                        | Thursday, November 28, 2024 |
-| protoc-gen-validate   | v1.0.4       | [32c2415](https://github.com/envoyproxy/protoc-gen-validate.git/commit/32c2415389a3538082507ae537e7edd9578c64ed)          | [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate.git)       | Wednesday, January 17, 2024 |
-| re2                   | 2022-04-01   | [0c5616d](https://github.com/google/re2.git/commit/0c5616df9c0aaa44c9440d87422012423d91c7d1)                              | [re2](https://github.com/google/re2.git)                                           | Wednesday, March 30, 2022   |
-| xds                   | No tag       | [3a472e5](https://github.com/cncf/xds.git/commit/3a472e524827f72d1ad621c4983dd5af54c46776)                                | [xds](https://github.com/cncf/xds.git)                                             | Thursday, November 16, 2023 |
-| zlib                  | v1.3         | [09155ea](https://github.com/madler/zlib/commit/09155eaa2f9270dc4ed1fa13e2b4b2613e6e4851)                                 | [zlib](https://github.com/madler/zlib)                                             | Friday, August 18, 2023     |
-| opentelemetry-cpp     | v1.18.0      | [a388e87](https://github.com/open-telemetry/opentelemetry-cpp/commit/a388e87d72b8321c189c8d41edb746ffa687ce3c)            | [opentelemetry-cpp](https://github.com/open-telemetry/opentelemetry-cpp)           | Friday, November 15, 2024   |
+| Third Party Component | Version      | Commit                                                                                                                    | Link                                                                               | Timestamp                    |
+| --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------- |
+| abseil-cpp            | 20240722.0   | [4447c75](https://github.com/abseil/abseil-cpp.git/commit/4447c7562e3bc702ade25105912dce503f0c4010)                       | [abseil-cpp](https://github.com/abseil/abseil-cpp.git)                             | Thursday, August 01, 2024    |
+| benchmark             | v1.9.0       | [12235e2](https://github.com/google/benchmark/commit/12235e24652fc7f809373e7c11a5f73c5763fc4c)                            | [benchmark](https://github.com/google/benchmark)                                   | Friday, August 16, 2024      |
+| bloaty                | No tag       | [60209eb](https://github.com/google/bloaty.git/commit/60209eb1ccc34d5deefb002d1b7f37545204f7f2)                           | [bloaty](https://github.com/google/bloaty.git)                                     | Monday, August 16, 2021      |
+| boringssl-with-bazel  | No tag       | [dec0d8f](https://github.com/google/boringssl.git/commit/dec0d8f681348af8bb675e07bd89989665fca8bc)                        | [boringssl-with-bazel](https://github.com/google/boringssl.git)                    | Wednesday, December 11, 2024 |
+| cares/cares           | cares-1_19_1 | [6360e96](https://github.com/c-ares/c-ares.git/commit/6360e96b5cf8e5980c887ce58ef727e53d77243a)                           | [cares/cares](https://github.com/c-ares/c-ares.git)                                | Monday, May 22, 2023         |
+| envoy-api             | No tag       | [88a3737](https://github.com/envoyproxy/data-plane-api.git/commit/88a37373e3cb5e1ab09e75dfb302b083168e6654)               | [envoy-api](https://github.com/envoyproxy/data-plane-api.git)                      | Monday, January 06, 2025     |
+| googleapis            | No tag       | [fe8ba05](https://github.com/googleapis/googleapis.git/commit/fe8ba054ad4f7eca946c2d14a63c3f07c0b586a0)                   | [googleapis](https://github.com/googleapis/googleapis.git)                         | Monday, August 19, 2024      |
+| googletest            | v1.15.0      | [2dd1c13](https://github.com/google/googletest.git/commit/2dd1c131950043a8ad5ab0d2dda0e0970596586a)                       | [googletest](https://github.com/google/googletest.git)                             | Friday, October 06, 2023     |
+| opencensus-proto      | v0.3.0       | [4aa53e1](https://github.com/census-instrumentation/opencensus-proto.git/commit/4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89) | [opencensus-proto](https://github.com/census-instrumentation/opencensus-proto.git) | Monday, July 20, 2020        |
+| opentelemetry         | v0.10.0      | [60fa875](https://github.com/open-telemetry/opentelemetry-proto.git/commit/60fa8754d890b5c55949a8c68dcfd7ab5c2395df)      | [opentelemetry](https://github.com/open-telemetry/opentelemetry-proto.git)         | Friday, July 30, 2021        |
+| protobuf              | v3.29.0      | [2d4414f](https://github.com/protocolbuffers/protobuf.git/commit/2d4414f384dc499af113b5991ce3eaa9df6dd931)                | [protobuf](https://github.com/protocolbuffers/protobuf.git)                        | Thursday, November 28, 2024  |
+| protoc-gen-validate   | v1.0.4       | [32c2415](https://github.com/envoyproxy/protoc-gen-validate.git/commit/32c2415389a3538082507ae537e7edd9578c64ed)          | [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate.git)       | Wednesday, January 17, 2024  |
+| re2                   | 2022-04-01   | [0c5616d](https://github.com/google/re2.git/commit/0c5616df9c0aaa44c9440d87422012423d91c7d1)                              | [re2](https://github.com/google/re2.git)                                           | Wednesday, March 30, 2022    |
+| xds                   | No tag       | [3a472e5](https://github.com/cncf/xds.git/commit/3a472e524827f72d1ad621c4983dd5af54c46776)                                | [xds](https://github.com/cncf/xds.git)                                             | Thursday, November 16, 2023  |
+| zlib                  | v1.3         | [09155ea](https://github.com/madler/zlib/commit/09155eaa2f9270dc4ed1fa13e2b4b2613e6e4851)                                 | [zlib](https://github.com/madler/zlib)                                             | Friday, August 18, 2023      |
+| opentelemetry-cpp     | v1.18.0      | [955a807](https://github.com/open-telemetry/opentelemetry-cpp/commit/955a807c0461544560429c2414b8967f6023e590)            | [opentelemetry-cpp](https://github.com/open-telemetry/opentelemetry-cpp)           | Monday, November 25, 2024    |
 
 ### Feedback
 
