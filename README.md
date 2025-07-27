@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-### gRPC [v1.73.1](https://github.com/grpc/grpc/releases/tag/v1.73.1)
+### gRPC [v1.74.0](https://github.com/grpc/grpc/releases/tag/v1.74.0)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -18,9 +18,9 @@ ______________________________________________________________________
 
 ##### Releases
 
-| Version                                                                  | Commit                                                                                  | Commit-Date            | Build Configurations                        | Compiler Set                                                         | Example |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.73.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.73.1) | [6eae42b](https://github.com/grpc/grpc/commit/6eae42baf0dc7950a8c25d227575a0d24c9aa286) | Tuesday, June 24, 2025 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| Version                                                                  | Commit                                                                                  | Commit-Date              | Build Configurations                        | Compiler Set                                                         | Example |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| [v1.74.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.74.0) | [3e7a4d5](https://github.com/grpc/grpc/commit/3e7a4d52d257990fa5b9d80f69f4a591178d9d7c) | Wednesday, July 23, 2025 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
@@ -71,7 +71,7 @@ ______________________________________________________________________
 
 | Third Party Component | Version      | Commit                                                                                                                    | Link                                                                               | Timestamp                   |
 | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------- |
-| abseil-cpp            | 20250127.1   | [d9e4955](https://github.com/abseil/abseil-cpp.git/commit/d9e4955c65cd4367dd6bf46f4ccb8cd3d100540b)                       | [abseil-cpp](https://github.com/abseil/abseil-cpp.git)                             | Tuesday, March 18, 2025     |
+| abseil-cpp            | 20250512.1   | [76bb243](https://github.com/abseil/abseil-cpp.git/commit/76bb24329e8bf5f39704eb10d21b9a80befa7c81)                       | [abseil-cpp](https://github.com/abseil/abseil-cpp.git)                             | Tuesday, June 17, 2025      |
 | benchmark             | v1.9.0       | [12235e2](https://github.com/google/benchmark/commit/12235e24652fc7f809373e7c11a5f73c5763fc4c)                            | [benchmark](https://github.com/google/benchmark)                                   | Friday, August 16, 2024     |
 | bloaty                | No tag       | [60209eb](https://github.com/google/bloaty.git/commit/60209eb1ccc34d5deefb002d1b7f37545204f7f2)                           | [bloaty](https://github.com/google/bloaty.git)                                     | Monday, August 16, 2021     |
 | boringssl-with-bazel  | No tag       | [c63fadb](https://github.com/google/boringssl.git/commit/c63fadbde60a2224c22189d14c4001bbd2a3a629)                        | [boringssl-with-bazel](https://github.com/google/boringssl.git)                    | Monday, April 21, 2025      |
@@ -81,7 +81,7 @@ ______________________________________________________________________
 | googletest            | v1.17.0      | [52eb810](https://github.com/google/googletest.git/commit/52eb8108c5bdec04579160ae17225d66034bd723)                       | [googletest](https://github.com/google/googletest.git)                             | Wednesday, April 30, 2025   |
 | opencensus-proto      | v0.3.0       | [4aa53e1](https://github.com/census-instrumentation/opencensus-proto.git/commit/4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89) | [opencensus-proto](https://github.com/census-instrumentation/opencensus-proto.git) | Monday, July 20, 2020       |
 | opentelemetry         | v0.10.0      | [60fa875](https://github.com/open-telemetry/opentelemetry-proto.git/commit/60fa8754d890b5c55949a8c68dcfd7ab5c2395df)      | [opentelemetry](https://github.com/open-telemetry/opentelemetry-proto.git)         | Friday, July 30, 2021       |
-| protobuf              | v4.31.0      | [3d4adad](https://github.com/protocolbuffers/protobuf.git/commit/3d4adad5c4c4e6a6f9f038769b8c90716065b0e4)                | [protobuf](https://github.com/protocolbuffers/protobuf.git)                        | Wednesday, May 14, 2025     |
+| protobuf              | v4.31.1      | [74211c0](https://github.com/protocolbuffers/protobuf.git/commit/74211c0dfc2777318ab53c2cd2c317a2ef9012de)                | [protobuf](https://github.com/protocolbuffers/protobuf.git)                        | Wednesday, May 28, 2025     |
 | protoc-gen-validate   | v1.0.4       | [32c2415](https://github.com/envoyproxy/protoc-gen-validate.git/commit/32c2415389a3538082507ae537e7edd9578c64ed)          | [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate.git)       | Wednesday, January 17, 2024 |
 | re2                   | 2022-04-01   | [0c5616d](https://github.com/google/re2.git/commit/0c5616df9c0aaa44c9440d87422012423d91c7d1)                              | [re2](https://github.com/google/re2.git)                                           | Wednesday, March 30, 2022   |
 | xds                   | No tag       | [3a472e5](https://github.com/cncf/xds.git/commit/3a472e524827f72d1ad621c4983dd5af54c46776)                                | [xds](https://github.com/cncf/xds.git)                                             | Thursday, November 16, 2023 |
