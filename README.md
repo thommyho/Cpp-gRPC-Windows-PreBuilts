@@ -158,3 +158,8 @@ For suggestions or issues, feel free to open a ticket in the respective reposito
 ______________________________________________________________________
 
 Thank you for using gRPC for C++ on Windows!
+
+
+### 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=thommyho/Cpp-gRPC-Windows-PreBuilts&type=Date&theme=dark)](https://star-history.com/#thommyho/Cpp-gRPC-Windows-PreBuilts&Date)
