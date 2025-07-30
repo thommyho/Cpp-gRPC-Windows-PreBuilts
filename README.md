@@ -3,9 +3,9 @@
 </div>
 
 <div align="center" width="100%">
-    <h2>Prebuilt Binaries for gRPC C++ on Windows</h2>
-    <p>gRPC prebuilt windows binaries and libs</p>
-    <p> x64 and x86 | MSVC143, MSVC142 (legacy 141 and 140) | Debug, Release, RelWithDebInfo</p>
+  <h2>Prebuilt gRPC C++ Binaries for Windows</h2>
+  <p>Ready-to-use gRPC C++ binaries and libraries for Windows.</p>
+  <p>Supports x86 &amp; x64 | MSVC 143, 142 (legacy: 141, 140) | Debug, Release, RelWithDebInfo</p>
     <div>
         <a target="_blank" href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts"><img src="https://img.shields.io/github/stars/thommyho/Cpp-gRPC-Windows-PreBuilts?style=flat&label=Stars" /></a>
         <a target="_blank" href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/releases"><img src="https://img.shields.io/github/downloads/thommyho/Cpp-gRPC-Windows-PreBuilts/total?label=binary%20downloads" /></a>
