@@ -1,5 +1,5 @@
 <div align="center" width="100%">
-    <img src="frontend/static/gopher.svg" width="150" />
+    <img src="./assets/grpc-logo.png" width="150" style="margin-left: 24px;" />
 </div>
 
 <div align="center" width="100%">
