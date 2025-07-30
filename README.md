@@ -1,5 +1,6 @@
 <div align="center" width="100%">
     <img src="./assets/grpc-logo.png" width="150" style="margin-left: 24px;" />
+    <p>Copyright of logo belongs to <a href="https://grpc.io/">gRPC</a></p>
 </div>
 
 <div align="center" width="100%">
