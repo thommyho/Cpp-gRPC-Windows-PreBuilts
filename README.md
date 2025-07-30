@@ -11,7 +11,6 @@
     </div>
     <div>
         <a target="_blank" href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/releases"><img src="https://img.shields.io/github/v/release/thommyho/Cpp-gRPC-Windows-PreBuilts?display_name=tag&label=Latest%20release" /></a>
-        <a target="_blank" href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/actions"><img src="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/actions/workflows/release.yml/badge.svg?event=push" /></a>
         <a target="_blank" href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commits/master"><img src="https://img.shields.io/github/last-commit/thommyho/Cpp-gRPC-Windows-PreBuilts" /></a>
     </div>
 </div>
