@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-### gRPC [v1.75.0](https://github.com/grpc/grpc/releases/tag/v1.75.0)
+### gRPC [v1.75.1](https://github.com/grpc/grpc/releases/tag/v1.75.1)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -20,7 +20,7 @@ ______________________________________________________________________
 
 | Version                                                                  | Commit                                                                                  | Commit-Date                | Build Configurations                        | Compiler Set                                                         | Example |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.75.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.75.0) | [093085c](https://github.com/grpc/grpc/commit/093085cc925e0d5aa6e92bc29e917f9bdc00add2) | Monday, September 15, 2025 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| [v1.75.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.75.1) | [9b63ce0](https://github.com/grpc/grpc/commit/9b63ce0d513672c5daad4f28342f03863c5589e5) | Friday, September 26, 2025 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
