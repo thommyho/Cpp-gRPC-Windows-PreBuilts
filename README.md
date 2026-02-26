@@ -143,6 +143,32 @@ For suggestions or issues, feel free to open a ticket in the respective reposito
 - Prebuilt binaries: [gRPC Windows](https://github.com/thommyho/gRPC_windows).
 - Visual Studio Examples: [Cpp-gRPC-Visual-Studio-Examples](https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples).
 
+Thank you for using gRPC for C++ on Windows!
+
 ______________________________________________________________________
 
-Thank you for using gRPC for C++ on Windows!
+### Sponsorship
+
+This project is proudly supported by [Minisforum](https://www.minisforum.com/), who provided the MS-A2 workstation (featuring the AMD Ryzen™ 9 9955HX) that powers our CI/CD build pipeline.
+
+**Impact on Build Performance**
+
+The Minisforum MS-A2 has dramatically accelerated our build times. Below is a comparison against our previous CI system (Ryzen™ 5 2400GE):
+
+<img src="assets/sponsorship_graph.png" alt="Compile Times Graph" width="75%">
+
+| System                    | Debug  | Release | RelWithDebInfo | Total (3 configs) | Total ×4 platforms |
+| ------------------------- | ------ | ------- | -------------- | ----------------- | ------------------ |
+| Ryzen™ 5 2400GE (4C/8T)   | 1.30 h | 1.33 h  | 1.36 h         | 3.99 h            | 15.95 h            |
+| Ryzen™ 9 9955HX (16C/32T) | 0.33 h | 0.32 h  | 0.33 h         | 0.98 h            | 3.94 h             |
+
+**Key improvements:**
+
+- **75% reduction in total compile time** for a single configuration.
+- Full CI runs (all 4 compiler targets) reduced from **~17 hours to ~4.3 hours**.
+- Faster iteration cycles enable more frequent releases and quicker feedback.
+
+The MS-A2's 16 cores and 32 threads make it an ideal platform for building complex C++ projects like gRPC across multiple Visual Studio toolsets (MSVC141, MSVC142, MSVC143) and architectures (x86, x64). Thank you, Minisforum, for helping us deliver prebuilt binaries to the Windows C++ community faster!
+Go check it out under https://www.minisforum.com/products/minisforum-ms-a2.
+
+Thanks a lot for your support!
