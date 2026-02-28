@@ -8,12 +8,13 @@ Prebuilt binaries for gRPC C++ are available for:
 
 Visit the release page to download the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.78.1) ⬅️.
 
-> **Note**: Starting with v1.78.1, the deployment layout for the CMake files has changed.
+> [!CAUTION]
+> Starting with v1.78.1, the deployment layout for the CMake files has changed.
 > The `cmake` directory has been moved from the project root into the `lib` directory.
 > This enables straightforward integration using `find_package` with CMake.
 
 
-> [!CAUTION]
+> [!IMPORTANT]
 > gRPC C++ **v1.47.0** is the first release requiring C++14.
 > If you cannot upgrade to C++14 at this time, you can use gRPC C++ 1.46.x.
 > gRPC C++ **v1.46.x** will be maintained by having fixes for
