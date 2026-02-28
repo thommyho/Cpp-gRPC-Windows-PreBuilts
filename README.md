@@ -13,6 +13,11 @@ Visit the release page to download the binaries ➡️ [here](https://github.com
 > The `cmake` directory has been moved from the project root into the `lib` directory.
 > This enables straightforward integration using `find_package` with CMake.
 
+---
+
+> [!NOTE]
+> Please test and give feedback to new examples directly from gRPC-Repository. Either download directly from the latest release.
+> Or visit ➡️ [here](https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples/tree/v2-next-gen-2022) ⬅️.
 
 > [!IMPORTANT]
 > gRPC C++ **v1.47.0** is the first release requiring C++14.
