@@ -13,7 +13,7 @@ Visit the release page to download the binaries ➡️ [here](https://github.com
 > This enables straightforward integration using `find_package` with CMake.
 
 
-> [!IMPORTANT]
+> [!CAUTION]
 > gRPC C++ **v1.47.0** is the first release requiring C++14.
 > If you cannot upgrade to C++14 at this time, you can use gRPC C++ 1.46.x.
 > gRPC C++ **v1.46.x** will be maintained by having fixes for
