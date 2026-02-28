@@ -4,9 +4,14 @@
 
 Prebuilt binaries for gRPC C++ are available for:
 
-- **Stable build**: [v1.78.0](https://github.com/grpc/grpc/releases/tag/v1.78.0)
+- **Stable build**: [v1.78.1](https://github.com/grpc/grpc/releases/tag/v1.78.1)
 
-Visit the release page to download the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.78.0) ⬅️.
+Visit the release page to download the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.78.1) ⬅️.
+
+> **Note**: Starting with v1.78.1, the deployment layout for the CMake files has changed.
+> The `cmake` directory has been moved from the project root into the `lib` directory.
+> This enables straightforward integration using `find_package` with CMake.
+
 
 > [!IMPORTANT]
 > gRPC C++ **v1.47.0** is the first release requiring C++14.
@@ -37,7 +42,7 @@ ______________________________________________________________________
 
 | Version                                                                  | Build-Info                                                                   | Build Configurations                        | Compiler Set                                                         | Example |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.78.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.78.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.78.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>                     | ✅      |
+| [v1.78.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.78.1) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.78.1) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>                     | ✅      |
 | [v1.46.7](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.7) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 > [!TIP]
@@ -48,6 +53,7 @@ ______________________________________________________________________
 
 | Version                                                                  | Build-Info                                                                   | Build Configurations                        | Compiler Set                                     | Example |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------ | ------- |
+| [v1.78.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.78.1) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.78.1) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
 | [v1.78.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.78.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.78.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
 | [v1.76.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.76.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.76.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
 | [v1.75.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.75.1) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.75.1) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
@@ -149,26 +155,56 @@ ______________________________________________________________________
 
 ### Sponsorship
 
-This project is proudly supported by [Minisforum](https://www.minisforum.com/), who provided the MS-A2 workstation (featuring the AMD Ryzen™ 9 9955HX) that powers our CI/CD build pipeline.
+This project is proudly supported by Minisforum, who generously provided the **MS-A2 workstation** - the powerhouse behind our CI/CD pipeline.
+Powered by the **AMD Ryzen™ 9 9955HX (16C/32T)**, the MS-A2 has completely transformed my build infrastructure and release velocity.
 
-**Impact on Build Performance**
+🔗 Check it out: [https://www.minisforum.com/products/minisforum-ms-a2](https://www.minisforum.com/products/minisforum-ms-a2)
 
-The Minisforum MS-A2 has dramatically accelerated our build times. Below is a comparison against our previous CI system (Ryzen™ 5 2400GE):
+______________________________________________________________________
 
-<img src="assets/sponsorship_graph.png" alt="Compile Times Graph" width="75%">
+#### ⚡ Real-World Build Performance Gains
 
-| System                    | Debug  | Release | RelWithDebInfo | Total (3 configs) | Total ×4 platforms |
-| ------------------------- | ------ | ------- | -------------- | ----------------- | ------------------ |
-| Ryzen™ 5 2400GE (4C/8T)   | 1.30 h | 1.33 h  | 1.36 h         | 3.99 h            | 15.95 h            |
-| Ryzen™ 9 9955HX (16C/32T) | 0.33 h | 0.32 h  | 0.33 h         | 0.98 h            | 3.94 h             |
+Upgrading from our previous CI machine (Ryzen™ 5 2400GE) to the MS-A2 delivered massive performance improvements across all configurations:
 
-**Key improvements:**
+<p align="center">
+  <img src="assets/sponsorship_graph.png" alt="Compile Times Graph" width="75%">
+</p>
 
-- **75% reduction in total compile time** for a single configuration.
-- Full CI runs (all 4 compiler targets) reduced from **~17 hours to ~4.3 hours**.
-- Faster iteration cycles enable more frequent releases and quicker feedback.
+| System                        | Debug      | Release    | RelWithDebInfo | Total (3 configs) | Total ×4 platforms |
+| ----------------------------- | ---------- | ---------- | -------------- | ----------------- | ------------------ |
+| Ryzen™ 5 2400GE (4C/8T)       | 1.30 h     | 1.33 h     | 1.36 h         | 3.99 h            | 15.95 h            |
+| **Ryzen™ 9 9955HX (16C/32T)** | **0.33 h** | **0.32 h** | **0.33 h**     | **0.98 h**        | **3.94 h**         |
 
-The MS-A2's 16 cores and 32 threads make it an ideal platform for building complex C++ projects like gRPC across multiple Visual Studio toolsets (MSVC141, MSVC142, MSVC143) and architectures (x86, x64). Thank you, Minisforum, for helping us deliver prebuilt binaries to the Windows C++ community faster!
-Go check it out under https://www.minisforum.com/products/minisforum-ms-a2.
+#### 📉 What That Means
 
-Thanks a lot for your support!
+- **🔥 75% reduction** in compile time per configuration
+- **⏱ Full CI runs reduced from ~17 hours → ~4.3 hours**
+- **🚀 4× faster complete multi-platform builds**
+- Faster iteration cycles
+- More frequent releases
+- Quicker contributor feedback
+
+For a C++ project building across multiple **Visual Studio toolsets (MSVC141, MSVC142, MSVC143)** and architectures (x86, x64), parallelism matters — and 16 cores / 32 threads make a *huge* difference.
+
+______________________________________________________________________
+
+#### 🛠 Why This Matters
+
+Faster CI means:
+
+- Pull requests get validated sooner
+- Bugs are caught earlier
+- Releases ship faster
+- The Windows C++ community gets updated prebuilt binaries more quickly
+
+The MS-A2 enables us to build complex C++ stacks like gRPC efficiently across multiple compiler targets - something that previously required nearly a full day of CI (waiting) time.
+
+______________________________________________________________________
+
+#### ❤️ Thank You
+
+A huge thank you to **Minisforum** for supporting open-source development and helping us improve reliability and delivery speed for our users.
+
+If you're looking for a compact yet extremely capable build workstation, the MS-A2 is absolutely worth checking out.
+
+👉 [https://www.minisforum.com/products/minisforum-ms-a2](https://www.minisforum.com/products/minisforum-ms-a2)
