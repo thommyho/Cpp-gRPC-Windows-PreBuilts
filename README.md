@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-### gRPC [v1.81.1](https://github.com/grpc/grpc/releases/tag/v1.81.1)
+### gRPC [v1.82.0](https://github.com/grpc/grpc/releases/tag/v1.82.0)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -18,9 +18,9 @@ ______________________________________________________________________
 
 ##### Releases
 
-| Version                                                                  | Commit                                                                                  | Commit-Date           | Build Configurations                        | Compiler Set                                                         | Example |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.81.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.81.1) | [e84a8a2](https://github.com/grpc/grpc/commit/e84a8a2f04095f2772ba42a4abccde4f9243e75b) | Friday, June 05, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| Version                                                                  | Commit                                                                                  | Commit-Date             | Build Configurations                        | Compiler Set                                                         | Example |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| [v1.82.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.0) | [742600a](https://github.com/grpc/grpc/commit/742600a76f5717044cde93ba424500c680e2002a) | Thursday, July 02, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
@@ -81,7 +81,7 @@ ______________________________________________________________________
 | googletest            | v1.17.0            | [52eb810](https://github.com/google/googletest/commit/52eb8108c5bdec04579160ae17225d66034bd723)                       | [googletest](https://github.com/google/googletest)                             | Wednesday, April 30, 2025    |
 | opencensus-proto      | v0.3.0             | [4aa53e1](https://github.com/census-instrumentation/opencensus-proto/commit/4aa53e15cbf1a47bc9087e6cfdca214c1eea4e89) | [opencensus-proto](https://github.com/census-instrumentation/opencensus-proto) | Monday, July 20, 2020        |
 | opentelemetry         | v0.10.0            | [60fa875](https://github.com/open-telemetry/opentelemetry-proto/commit/60fa8754d890b5c55949a8c68dcfd7ab5c2395df)      | [opentelemetry](https://github.com/open-telemetry/opentelemetry-proto)         | Friday, July 30, 2021        |
-| protobuf              | v4.33.5-objectivec | [b6f9284](https://github.com/protocolbuffers/protobuf/commit/b6f9284da830b69be787732ffdaa35049d20a088)                | [protobuf](https://github.com/protocolbuffers/protobuf)                        | Friday, January 30, 2026     |
+| protobuf              | v5.35.0-objectivec | [e59364c](https://github.com/protocolbuffers/protobuf/commit/e59364c38e10de3686a3305ff11fbfc59a10dbd8)                | [protobuf](https://github.com/protocolbuffers/protobuf)                        | Wednesday, May 20, 2026      |
 | protoc-gen-validate   | v1.2.1             | [7b06248](https://github.com/envoyproxy/protoc-gen-validate/commit/7b06248484ceeaa947e93ca2747eccf336a88ecc)          | [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate)       | Thursday, January 23, 2025   |
 | re2                   | 2022-04-01         | [0c5616d](https://github.com/google/re2/commit/0c5616df9c0aaa44c9440d87422012423d91c7d1)                              | [re2](https://github.com/google/re2)                                           | Wednesday, March 30, 2022    |
 | xds                   | No tag             | [ee656c7](https://github.com/cncf/xds/commit/ee656c7534f5d7dc23d44dd611689568f72017a6)                                | [xds](https://github.com/cncf/xds)                                             | Wednesday, December 10, 2025 |
