@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-### gRPC [v1.82.0](https://github.com/grpc/grpc/releases/tag/v1.82.0)
+### gRPC [v1.82.1](https://github.com/grpc/grpc/releases/tag/v1.82.1)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -18,9 +18,9 @@ ______________________________________________________________________
 
 ##### Releases
 
-| Version                                                                  | Commit                                                                                  | Commit-Date             | Build Configurations                        | Compiler Set                                                         | Example |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.82.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.0) | [742600a](https://github.com/grpc/grpc/commit/742600a76f5717044cde93ba424500c680e2002a) | Thursday, July 02, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| Version                                                                  | Commit                                                                                  | Commit-Date              | Build Configurations                        | Compiler Set                                                         | Example |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| [v1.82.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.1) | [acccf84](https://github.com/grpc/grpc/commit/acccf84c0df20487d64101f528e5d426541ca4e5) | Wednesday, July 08, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
