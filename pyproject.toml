@@ -6,12 +6,12 @@ authors = [
     { name = "Thomas Hochstrasser", email = "thommyho1988@gmail.com" }
 ]
 readme = "README.md"
-requires-python = "==3.12.*"
+requires-python = "==3.14.*"
 dependencies = [
-    "markdown-include>=0.8.1",
-    "mike>=2.1.3",
-    "mkdocs-material>=9.6.22",
-    "mkdocs-material-extensions>=1.3.1",
+    "markdown-include<1.0",
+    "mike>2,<=3.0",
+    "mkdocs-material>=9.7",
+    "mkdocs-material-extensions>=1,<2.0",
 ]
 
 [tool.uv]
