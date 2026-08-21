@@ -45,9 +45,11 @@ Navigate to the [repository](https://github.com/thommyho/Cpp-gRPC-Windows-PreBui
 | Version | Build Info | All Configurations | Examples |
 |---------|------------|-------------------|----------|
 | **[1.83.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.0)** (latest) | [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.0) | ✅ | ✅ |
-| **[1.46.7](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7)** (legacy) | [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.7) | ✅ | ✅ |
+| **[1.46.7](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7)** (legacy, last C++11) | [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.7) | ✅ | ✅ |
 | 1.82.1 - 1.50.0 | [links available](https://github.com/thommyho/gRPC_windows/releases) | ✅ | ✅ |
 | 1.49.1 - 1.20.0 | [older versions](https://github.com/thommyho/gRPC_windows/releases) | ✅ | ✅ |
+
+> **Note:** Starting with v1.78.1, the deployment layout for CMake files has changed. The `cmake` directory has been moved from the project root into the `lib` directory for straightforward integration using `find_package`.
 
 > **Note:** The precompiled libraries are attached as assets (compressed zip archives) to the bottom of each release page.
 
@@ -118,5 +120,19 @@ For common issues and FAQs, please refer to the [FAQ documentation](docs/faq.md)
 
 ---
 
-**License**: See LICENSE file (if applicable)  
-**Author**: Thommy Ho
+## License & Attribution
+
+This project is licensed under the [MIT License](LICENSE).
+
+### gRPC Upstream Attribution
+
+This project packages prebuilt libraries from the official [gRPC project](https://github.com/grpc/grpc). 
+Please review the [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) file for complete attribution
+and license information for all third-party components included in gRPC.
+
+The original gRPC project is distributed under the Apache License 2.0, and this packaging effort
+is distributed under the MIT License. Both licenses are compatible, but please ensure you comply
+with the terms of both when using this software.
+
+**Author**: Thomas Hochstrasser  
+**Original gRPC Authors**: See [gRPC contributors](https://github.com/grpc/grpc/blob/master/AUTHORS)

@@ -32,3 +32,11 @@ For a better experience use one of the IDEs with one the upper mentioned compile
 ## Links
 
 - Official website: **<https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts>**
+- gRPC official site: **<https://grpc.io/>**
+- gRPC GitHub repository: **<https://github.com/grpc/grpc>**
+- License: [MIT](../LICENSE)
+- Third-party notices: [THIRD-PARTY-NOTICES.txt](../THIRD-PARTY-NOTICES.txt)
+
+## License & Attribution
+
+This project is licensed under the MIT License. The original gRPC libraries are distributed under Apache 2.0. Please review the THIRD-PARTY-NOTICES.txt file for complete attribution and license information for all third-party components.
