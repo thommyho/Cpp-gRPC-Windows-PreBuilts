@@ -1,7 +1,7 @@
 [project]
-name = "MyDocs"
+name = "cpp-grpc-docs"
 version = "0.1.0"
-description = "Getting Started with gRPC on Windows"
+description = "Static documentation viewer for Cpp-gRPC-Windows-PreBuilts"
 authors = [
     { name = "Thomas Hochstrasser", email = "thommyho1988@gmail.com" }
 ]
@@ -12,13 +12,15 @@ dependencies = [
     "mike>2,<=3.0",
     "mkdocs-material>=9.7",
     "mkdocs-material-extensions>=1,<2.0",
+    "poethepoet>=0.48.0",
 ]
 
-[tool.uv]
-package = false
+[project.scripts]
+docs-open = "site._main:main"
 
-[dependency-groups]
-dev = [
-    "mdformat>=1.0.0",
-    "mdformat-mkdocs>=5.3.0",
-]
+[tool.poe.tasks]
+build-site = { cmd = "uv run mkdocs build", help = "Build MkDocs static site" }
+deploy = { cmd = "uv run mkdocs gh-deploy", help = "Deploy to GitHub Pages" }
+open-docs = { cmd = "uv run docs-open", help = "Open documentation in browser" }
+build-app = { cmd = "uv run pyinstaller --name 'Cpp-gRPC-Docs' --onefile --windowed docs-open.py", help = "Build PyInstaller executable" }
+clean = { cmd = "uv run mkdocs build --clean", help = "Clean and rebuild MkDocs site" }
