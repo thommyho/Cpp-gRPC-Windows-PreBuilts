@@ -8,7 +8,7 @@
 Or use following release table
 
 |                                                         Version                                                         |                                 Build-Info                                 |        All Build-Configurations         |                Examples                 |
-|:-----------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|:---------------------------------------:|:---------------------------------------:|
+| :---------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------: | :-------------------------------------: |
 | **[1.83.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.0) (:octicons-heart-fill-24:{ .heart } latest)** | **[link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.0)** | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
 | **[1.46.7](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7) (:octicons-heart-fill-24:{ .heart } latest)** | **[link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.7)** | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
 |                         [1.82.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.1)                         |   [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.82.1)   | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
@@ -90,7 +90,9 @@ Or use following release table
 |                         [1.20.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.20.0)                         |   [link](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.20.0)   | :material-check-decagram:{ .tick-blue } | :material-check-decagram:{ .tick-blue } |
 
 The precompiled libraries are attached as assets compressed in zip archives to the bottom of the page.
+
 !!! warning "So far all releases had been successfully built and tested against 2019 and 2022 compilers.
+
 !!! success
 
     - [x] Downloaded one or more archives e.g.: `MSVC143_64.zip`.
@@ -178,6 +180,7 @@ Click :material-cursor-default-click: `Examples_<vs_compiler_name>` and choose `
 !!! info " Output Directory "
 
     The output layout follows this scheme
+
     ```sh
     .
     └─ _out_/

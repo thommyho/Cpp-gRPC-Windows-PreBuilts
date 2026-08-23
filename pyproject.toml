@@ -16,3 +16,9 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+[dependency-groups]
+dev = [
+    "mdformat>=1.0.0",
+    "mdformat-mkdocs>=5.3.0",
+]
