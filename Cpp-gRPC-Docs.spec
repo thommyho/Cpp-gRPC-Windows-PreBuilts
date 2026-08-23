@@ -5,7 +5,7 @@ a = Analysis(
     ['docs-open.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('site', 'site')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
