@@ -15,6 +15,9 @@ copyright: "Copyright &copy; 2020-2026 Thomas Hochstrasser. gRPC is licensed und
 
 docs_dir: docs
 
+hooks:
+  - docs/hooks/hooks.py
+
 theme:
   logo: _assets/logo.svg
   favicon: _assets/favicon.ico
