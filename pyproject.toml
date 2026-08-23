@@ -9,10 +9,13 @@ readme = "README.md"
 requires-python = "==3.14.*"
 dependencies = [
     "markdown-include<1.0",
+    "mdformat>=1.0.0",
+    "mdformat-mkdocs>=5.3.0",
     "mike>2,<=3.0",
     "mkdocs-material>=9.7",
     "mkdocs-material-extensions>=1,<2.0",
     "poethepoet>=0.48.0",
+    "pyinstaller>=6.22.2",
 ]
 
 [project.scripts]
