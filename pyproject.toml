@@ -25,5 +25,5 @@ docs-open = "site._main:main"
 build-site = { cmd = "uv run mkdocs build", help = "Build MkDocs static site" }
 deploy = { cmd = "uv run mkdocs gh-deploy", help = "Deploy to GitHub Pages" }
 open-docs = { cmd = "uv run docs-open", help = "Open documentation in browser" }
-build-app = { cmd = "uv run pyinstaller --name 'Cpp-gRPC-Docs' --onefile --windowed docs-open.py", help = "Build PyInstaller executable" }
+build-app = { cmd = "uv run pyinstaller Cpp-gRPC-Docs.spec", help = "Build PyInstaller executable" }
 clean = { cmd = "uv run mkdocs build --clean", help = "Clean and rebuild MkDocs site" }

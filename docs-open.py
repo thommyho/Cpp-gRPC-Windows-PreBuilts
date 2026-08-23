@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 import sys
 import threading
@@ -22,6 +20,62 @@ class QuietHTTPRequestHandler(SimpleHTTPRequestHandler):
         pass
 
 
+class AutoShutdownHTTPServer(ThreadingHTTPServer):
+    daemon_threads = True
+
+    def __init__(self, *args, shutdown_delay=2.0, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.shutdown_delay = shutdown_delay
+        self._active_connections = 0
+        self._lock = threading.Lock()
+        self._shutdown_timer = None
+        self._shutting_down = False
+
+    def process_request_thread(self, request, client_address):
+        with self._lock:
+            self._active_connections += 1
+
+            # A new connection means the server is still being used.
+            if self._shutdown_timer is not None:
+                self._shutdown_timer.cancel()
+                self._shutdown_timer = None
+
+        try:
+            super().process_request_thread(request, client_address)
+        finally:
+            with self._lock:
+                self._active_connections -= 1
+
+                # Last connection disappeared.
+                if (
+                    self._active_connections == 0
+                    and not self._shutting_down
+                ):
+                    self._shutdown_timer = threading.Timer(
+                        self.shutdown_delay,
+                        self._shutdown_if_idle
+                    )
+                    self._shutdown_timer.daemon = True
+                    self._shutdown_timer.start()
+
+    def _shutdown_if_idle(self):
+        with self._lock:
+            if self._active_connections != 0:
+                return
+
+            if self._shutting_down:
+                return
+
+            self._shutting_down = True
+
+        print("No active connections. Shutting down...")
+
+        # shutdown() must be called from a thread other than
+        # the thread running serve_forever().
+        self.shutdown()
+
+
 def main():
     site_path = resource_path("site")
 
@@ -29,13 +83,12 @@ def main():
         print(f"ERROR: Site directory not found: {site_path}")
         return 1
 
-    # Serve files from the bundled site directory
     os.chdir(site_path)
 
-    # Use port 0 so Windows chooses an available port
-    server = ThreadingHTTPServer(
+    server = AutoShutdownHTTPServer(
         ("127.0.0.1", 0),
-        QuietHTTPRequestHandler
+        QuietHTTPRequestHandler,
+        shutdown_delay=2.0,
     )
 
     host, port = server.server_address
@@ -44,21 +97,19 @@ def main():
     print(f"Serving documentation from: {site_path}")
     print(f"Documentation URL: {url}")
 
-    # Start browser after server is ready
     threading.Timer(
         0.2,
         lambda: webbrowser.open(url)
     ).start()
 
     try:
-        # IMPORTANT: keep the executable alive
         server.serve_forever()
     except KeyboardInterrupt:
         pass
     finally:
-        server.shutdown()
         server.server_close()
 
+    print("Documentation server stopped.")
     return 0
 
 

@@ -19,6 +19,7 @@ theme:
   logo: _assets/logo.svg
   favicon: _assets/favicon.ico
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: indigo
@@ -48,6 +49,7 @@ theme:
 
 extra_css:
   - _assets/user.css
+  - _assets/extra.css
 
 markdown_extensions:
   - pymdownx.emoji:
@@ -80,3 +82,13 @@ nav:
   - "Getting started":
       - "In three steps": steps.md
       - "FAQ": faq.md
+
+extra:
+  footer:
+      text: |
+        <div class="footer-commit">
+          <span class="commit-msg">Latest commit:</span>
+          <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commits/main" target="_blank" rel="noopener">
+            <span class="commit-sha">15041a2</span>
+          </a>
+        </div>

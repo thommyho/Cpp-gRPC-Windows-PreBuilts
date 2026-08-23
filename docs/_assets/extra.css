@@ -1,0 +1,36 @@
+.footer-commit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border-top: 1px solid #2d2d44;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-commit a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+.footer-commit a:hover {
+  text-decoration: underline;
+}
+
+.footer-commit .commit-msg {
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.footer-commit .commit-sha {
+  font-family: "Consolas", "Monaco", monospace;
+  background-color: #16213e;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
