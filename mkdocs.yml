@@ -19,7 +19,7 @@ theme:
   logo: _assets/logo.svg
   favicon: _assets/favicon.ico
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides
   palette:
     - scheme: default
       primary: indigo
