@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-### gRPC [v1.83.0](https://github.com/grpc/grpc/releases/tag/v1.83.0)
+### gRPC [v1.84.0](https://github.com/grpc/grpc/releases/tag/v1.84.0)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -18,9 +18,9 @@ ______________________________________________________________________
 
 ##### Releases
 
-| Version                                                                  | Commit                                                                                  | Commit-Date            | Build Configurations                        | Compiler Set                                                         | Example |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.83.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.0) | [c876f4d](https://github.com/grpc/grpc/commit/c876f4da50f7da2f331888b88b2a7243514139fe) | Tuesday, July 21, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| Version                                                                  | Commit                                                                                  | Commit-Date                | Build Configurations                        | Compiler Set                                                         | Example |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
+| [v1.84.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.0) | [3252a89](https://github.com/grpc/grpc/commit/3252a89f10d8e92997862167ca7d095ecda85973) | Friday, September 11, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
@@ -88,6 +88,7 @@ ______________________________________________________________________
 | zlib                  | v1.3.1.2           | [f1f503d](https://github.com/madler/zlib/commit/f1f503da85d52e56aae11557b4d79a42bcaa2b86)                             | [zlib](https://github.com/madler/zlib)                                         | Monday, January 29, 2024     |
 | opentelemetry-cpp     | v1.19.0            | [ced7986](https://github.com/open-telemetry/opentelemetry-cpp/commit/ced79860f8c8a091a2eabfee6d47783f828a9b59)        | [opentelemetry-cpp](https://github.com/open-telemetry/opentelemetry-cpp)       | Wednesday, January 22, 2025  |
 | cel-spec              | v0.24.0            | [9f069b3](https://github.com/google/cel-spec/commit/9f069b3ee58b02d6f6736c5ebd6587075c1a1b22)                         | [cel-spec](https://github.com/google/cel-spec)                                 | Wednesday, May 07, 2025      |
+| grpc-proto            | No tag             | [ec30f58](https://github.com/grpc/grpc-proto/commit/ec30f589e2519d595688b9a42f88a91bdd6b733f)                         | [grpc-proto](https://github.com/grpc/grpc-proto)                               | Thursday, June 27, 2024      |
 
 ### Feedback
 
