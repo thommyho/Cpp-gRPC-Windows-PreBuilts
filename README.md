@@ -4,9 +4,9 @@
 
 Prebuilt binaries for gRPC C++ are available for:
 
-- **Stable build**: [v1.83.0](https://github.com/grpc/grpc/releases/tag/v1.83.0)
+- **Stable build**: [v1.84.0](https://github.com/grpc/grpc/releases/tag/v1.84.0)
 
-Visit the release page to download the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.83.0) ⬅️.
+Visit the release page to download the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.84.0) ⬅️.
 
 ---
 
@@ -52,7 +52,7 @@ ______________________________________________________________________
 
 | Version                                                                  | Build-Info                                                                   | Build Configurations                        | Compiler Set                                                         | Example |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ------- |
-| [v1.83.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>                     | ✅      |
+| [v1.84.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>                     | ✅      |
 | [v1.46.7](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.7) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 > [!TIP]
@@ -63,6 +63,7 @@ ______________________________________________________________________
 
 | Version                                                                  | Build-Info                                                                   | Build Configurations                        | Compiler Set                                     | Example |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------ | ------- |
+| [v1.84.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
 | [v1.83.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
 | [v1.82.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.1) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.82.1) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
 | [v1.82.0](https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.0) | [Build Info](https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.82.0) | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br> | ✅      |
