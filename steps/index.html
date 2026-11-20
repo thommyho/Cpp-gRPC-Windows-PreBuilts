@@ -566,6 +566,99 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sponsorship
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sponsorship
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sponsorship/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sponsorship
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -677,11 +770,32 @@
 <li>On the landing page select your desired gRPC version</li>
 </ul>
 <p>Or use following release table</p>
+<div class="admonition important">
+<p class="admonition-title">C++14 required from v1.47.0</p>
+<p>gRPC C++ <strong>v1.47.0</strong> is the first release requiring C++14.
+If you cannot upgrade to C++14, use <strong>v1.46.7</strong>, the last release requiring only C++11 support.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Changed CMake layout from v1.78.1</p>
+<p>Starting with v1.78.1, the deployment layout for the CMake files has changed.
+The <code>cmake</code> directory has moved from the project root into the <code>lib</code> directory.
+This enables straightforward integration using <code>find_package</code> with CMake.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Compiler sets</p>
+<ul>
+<li><code>MSVC145</code>: Visual Studio 2026 (from v1.85.0)</li>
+<li><code>MSVC143</code>: Visual Studio 2022</li>
+<li><code>MSVC142</code>: Visual Studio 2019 (until v1.84.x)</li>
+<li><code>MSVC141</code>: Visual Studio 2017 (until v1.45.1, and v1.46.7)</li>
+</ul>
+</div>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">Version</th>
 <th style="text-align: center;">Build-Info</th>
+<th style="text-align: center;">Compiler Set (x86, x64)</th>
 <th style="text-align: center;">All Build-Configurations</th>
 <th style="text-align: center;">Examples</th>
 </tr>
@@ -690,535 +804,653 @@
 <tr>
 <td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.3">1.85.3</a> (<span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg></span> latest)</strong></td>
 <td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.85.3">link</a></strong></td>
+<td style="text-align: center;"><code>MSVC145</code> <code>MSVC143</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.3">1.84.3</a> (<span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg></span> latest)</strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.3">1.84.3</a> (<span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg></span> latest 1.84.x)</strong></td>
 <td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.3">link</a></strong></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7">1.46.7</a> (<span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg></span> latest)</strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7">1.46.7</a> (<span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg></span> latest C++11)</strong></td>
 <td style="text-align: center;"><strong><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.7">link</a></strong></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.2">1.85.2</a></td>
-<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.2">link</a></td>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.85.2">link</a></td>
+<td style="text-align: center;"><code>MSVC145</code> <code>MSVC143</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.1">1.85.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.85.1">link</a></td>
+<td style="text-align: center;"><code>MSVC145</code> <code>MSVC143</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.0">1.85.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.85.0">link</a></td>
+<td style="text-align: center;"><code>MSVC145</code> <code>MSVC143</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.2">1.84.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.1">1.84.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.0">1.84.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.84.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.2">1.83.2</a></td>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.1">1.83.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.83.0">1.83.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.83.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.2">1.82.2</a></td>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.82.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.1">1.82.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.82.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.82.0">1.82.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.82.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.81.2">1.81.2</a></td>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.81.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.81.1">1.81.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.81.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.81.0">1.81.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.81.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.80.0">1.80.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.80.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.78.1">1.78.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.78.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.78.0">1.78.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.78.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.76.0">1.76.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.76.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.75.1">1.75.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.75.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.75.0">1.75.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.75.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.74.1">1.74.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.74.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.74.0">1.74.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.74.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.73.1">1.73.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.73.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.73.0">1.73.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.73.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.72.1">1.72.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.72.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.72.0">1.72.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.72.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.71.0">1.71.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.71.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.70.2">1.70.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.70.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.70.1">1.70.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.70.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.70.0">1.70.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.70.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.69.0">1.69.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.69.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.68.2">1.68.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.68.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.68.1">1.68.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.68.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.68.0">1.68.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.68.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.67.1">1.67.1</a></td>
+<td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.67.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.67.0">1.67.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.67.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.66.2">1.66.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.66.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.66.1">1.66.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.66.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.65.0">1.65.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.65.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.64.2">1.64.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.64.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.64.1">1.64.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.64.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.64.0">1.64.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.64.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.63.0">1.63.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.63.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.62.1">1.62.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.62.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.62.0">1.62.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.62.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.61.1">1.61.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.61.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.61.0">1.61.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.61.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.60.0">1.60.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.60.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.59.1">1.59.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.59.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.58.0">1.58.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.58.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.57.0">1.57.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.57.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.56.2">1.56.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.56.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.56.0">1.56.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.56.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.55.1">1.55.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.55.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.55.0">1.55.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.55.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.54.2">1.54.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.54.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.54.1">1.54.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.54.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.54.0">1.54.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.54.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.53.0">1.53.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.53.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.52.1">1.52.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.52.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.52.0">1.52.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.52.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.51.1">1.51.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.51.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.51.0">1.51.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.51.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.50.1">1.50.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.50.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.50.0">1.50.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.50.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.49.1">1.49.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.49.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.48.0">1.48.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.48.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.47.0">1.47.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.47.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.6">1.46.6</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.6">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.5">1.46.5</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.5">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.4">1.46.4</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.4">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.3">1.46.3</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.3">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.1">1.46.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.1">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.0">1.46.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.46.0">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.45.2">1.45.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.45.2">link</a></td>
+<td style="text-align: center;"><code>MSVC143</code> <code>MSVC142</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.45.1">1.45.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.45.1">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.45.0">1.45.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.45.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.44.0">1.44.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.44.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.43.2">1.43.2</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.43.2">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.43.0">1.43.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.43.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.42.0">1.42.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.42.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.41.1">1.41.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.41.1">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.41.0">1.41.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.41.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.40.0">1.40.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.40.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.39.1">1.39.1</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.39.1">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.22.0">1.22.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.22.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.21.4">1.21.4</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.21.4">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.20.0">1.20.0</a></td>
 <td style="text-align: center;"><a href="https://github.com/thommyho/gRPC_windows_prebuilt/tree/v1.20.0">link</a></td>
+<td style="text-align: center;"><code>MSVC142</code> <code>MSVC141</code></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji tick-blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg></span></td>
 </tr>
 </tbody>
 </table>
 <p>The precompiled libraries are attached as assets compressed in zip archives to the bottom of the page.</p>
-<p>!!! warning "So far all releases had been successfully built and tested against 2019 and 2022 compilers.</p>
+<div class="admonition warning">
+<p class="admonition-title">All releases are built and tested against the compilers listed in the Compiler Set column.</p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <ul class="task-list">
@@ -1235,12 +1467,14 @@
 ├─<span class="w"> </span>vs2022/<span class="w">      </span><span class="c1"># -&gt; From Examples.zip - Directory containing project files (organize source code files and other resources) for Visual Studio 2022</span>
 ├─<span class="w"> </span>MSVC140_32/<span class="w">  </span><span class="c1"># -&gt; From MSC140_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2015 targeting 32-bit</span>
 ├─<span class="w"> </span>MSVC140_64/<span class="w">  </span><span class="c1"># -&gt; From MSC140_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2015 targeting 64-bit</span>
-├─<span class="w"> </span>MSVC140_32/<span class="w">  </span><span class="c1"># -&gt; From MSC141_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2017 targeting 32-bit</span>
-├─<span class="w"> </span>MSVC140_64/<span class="w">  </span><span class="c1"># -&gt; From MSC141_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2017 targeting 64-bit</span>
+├─<span class="w"> </span>MSVC141_32/<span class="w">  </span><span class="c1"># -&gt; From MSC141_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2017 targeting 32-bit</span>
+├─<span class="w"> </span>MSVC141_64/<span class="w">  </span><span class="c1"># -&gt; From MSC141_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2017 targeting 64-bit</span>
 ├─<span class="w"> </span>MSVC142_32/<span class="w">  </span><span class="c1"># -&gt; From MSC142_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2019 targeting 32-bit</span>
 ├─<span class="w"> </span>MSVC142_64/<span class="w">  </span><span class="c1"># -&gt; From MSC142_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2019 targeting 64-bit</span>
 ├─<span class="w"> </span>MSVC143_32/<span class="w">  </span><span class="c1"># -&gt; From MSC143_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2022 targeting 32-bit</span>
 ├─<span class="w"> </span>MSVC143_64/<span class="w">  </span><span class="c1"># -&gt; From MSC143_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2022 targeting 64-bit</span>
+├─<span class="w"> </span>MSVC145_32/<span class="w">  </span><span class="c1"># -&gt; From MSC145_32.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2026 targeting 32-bit</span>
+├─<span class="w"> </span>MSVC145_64/<span class="w">  </span><span class="c1"># -&gt; From MSC145_64.zip - Directory containing the prebuilt libraries and header files for Visual Studio 2026 targeting 64-bit</span>
 
 ├─<span class="w"> </span>.gitattributes<span class="w">  </span><span class="c1"># Can be ignored.</span>
 ├─<span class="w"> </span>.gitignore<span class="w">      </span><span class="c1"># Can be ignored.</span>
@@ -1358,14 +1592,14 @@ If everything was correctly placed (unpacked), no error popup will appear <img a
   <div class="footer-commit">
     <span class="commit-msg">Latest commit:</span>
 
-    <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commit/3a6fc81719abc6f091645ee9079d849cfd623b52"
+    <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commit/1167e4768ab37604f9ed7d5a8c5614f47206580b"
        target="_blank"
        rel="noopener">
-      <span class="commit-sha">3a6fc81</span>
+      <span class="commit-sha">1167e47</span>
     </a>
 
     <span class="commit-title">
-      feat: update release table with additional gRPC versions
+      Add Sponsorship section to navigation in mkdocs.yml
     </span>
   </div>
 

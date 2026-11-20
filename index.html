@@ -456,6 +456,99 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sponsorship
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sponsorship
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sponsorship/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sponsorship
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -505,6 +598,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -547,10 +651,13 @@
 <h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
 <p>Prebuilt libraries and required header files packaged in archives.</p>
 <ul>
+<li>Latest stable build: <a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.3">v1.85.3</a></li>
+<li>Last stable build requiring only C++11 support: <a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7">v1.46.7</a></li>
 <li>For several modern Visual Studio Compilers:<ul>
+<li>Visual Studio 2026 - <code>MSVC 145</code> - from v1.85.0</li>
 <li>Visual Studio 2022 - <code>MSVC 143</code></li>
-<li>Visual Studio 2019 - <code>MSVC 142</code></li>
-<li>Visual Studio 2017 - <code>MSVC 141</code> - until v1.45.2</li>
+<li>Visual Studio 2019 - <code>MSVC 142</code> - until v1.84.x</li>
+<li>Visual Studio 2017 - <code>MSVC 141</code> - until v1.45.1 (and v1.46.7)</li>
 <li>Visual Studio 2015 - <code>MSVC 140</code> - until v1.45.2</li>
 </ul>
 </li>
@@ -561,6 +668,9 @@
 <ul>
 <li>Several easy starter examples from the official gRPC project<ul>
 <li>For <code>Visual Studio 2022</code>, <code>Visual Studio 2019</code></li>
+<li>Tested with gRPC versions v1.42.0 and above</li>
+<li>Maintained at <a href="https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples">Cpp-gRPC-Visual-Studio-Examples</a></li>
+<li>New examples taken directly from the gRPC repository are available on the <a href="https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples/tree/v2-next-gen-2022">v2-next-gen-2022</a> branch - please test and give feedback</li>
 <li>For older versions of Visual Studio e.g. <code>Visual Studio 2017</code> and <code>Visual Studio 2015</code> until version 1.45.2</li>
 <li><code>Pre-configured</code> - Can be used in seconds.</li>
 <li><code>Debuggable</code> - <code>RelWithDebInfo</code> and <code>Debug</code> include symbols</li>
@@ -570,10 +680,18 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>One of the compilers:</p>
 <ul>
+<li>Visual Studio 2026 - <code>MSVC 145</code></li>
 <li>Visual Studio 2022 - <code>MSVC 143</code></li>
-<li>Visual Studio 2019 - <code>MSVC 142</code></li>
+<li>Visual Studio 2019 - <code>MSVC 142</code> (up to v1.84.x)</li>
 </ul>
+<p>gRPC C++ v1.47.0 and later require C++14.</p>
 <p>For a better experience use one of the IDEs with one the upper mentioned compilers.</p>
+<h2 id="feedback">Feedback<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
+<p>For suggestions or issues, open a ticket in the respective repository:</p>
+<ul>
+<li>Prebuilt binaries: <a href="https://github.com/thommyho/gRPC_windows">gRPC Windows</a></li>
+<li>Visual Studio Examples: <a href="https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples">Cpp-gRPC-Visual-Studio-Examples</a></li>
+</ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Official website: <strong><a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts">https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts</a></strong></li>
@@ -639,14 +757,14 @@
   <div class="footer-commit">
     <span class="commit-msg">Latest commit:</span>
 
-    <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commit/3a6fc81719abc6f091645ee9079d849cfd623b52"
+    <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commit/1167e4768ab37604f9ed7d5a8c5614f47206580b"
        target="_blank"
        rel="noopener">
-      <span class="commit-sha">3a6fc81</span>
+      <span class="commit-sha">1167e47</span>
     </a>
 
     <span class="commit-title">
-      feat: update release table with additional gRPC versions
+      Add Sponsorship section to navigation in mkdocs.yml
     </span>
   </div>
 
