@@ -18,6 +18,21 @@ Visit the release page to download the binaries ➡️ [here](https://github.com
 
 Visit the release page to download the binaries ➡️ [here](https://github.com/thommyho/gRPC_windows/releases/v1.46.7) ⬅️.
 
+---
+
+> [!CAUTION]
+> Starting with v1.78.1, the deployment layout for the CMake files has changed.
+> The `cmake` directory has been moved from the project root into the `lib` directory.
+> This enables straightforward integration using `find_package` with CMake.
+
+---
+
+> [!NOTE]
+> Please test and give feedback to new examples directly from gRPC-Repository. Either download directly from the latest release.
+> Or visit ➡️ [here](https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples/tree/v2-next-gen-2022) ⬅️.
+
+---
+
 > **Note**: Prebuilt binaries are available as ZIP archives from [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 > For detailed build information (e.g., compilers, SDKs), refer to the Build-Info links (tracking since v1.22.0).
 
