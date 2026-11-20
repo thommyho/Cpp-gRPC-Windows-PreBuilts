@@ -535,6 +535,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#which-grpc-versions-are-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which gRPC versions are available?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-compilers-are-supported" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -774,10 +785,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#which-grpc-versions-are-available" class="md-nav__link">
+  <a href="#which-c-standard-do-i-need" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Which gRPC versions are available?
+        Which C++ standard do I need?
       
     </span>
   </a>
@@ -1064,6 +1075,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#which-grpc-versions-are-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which gRPC versions are available?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-compilers-are-supported" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1303,10 +1325,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#which-grpc-versions-are-available" class="md-nav__link">
+  <a href="#which-c-standard-do-i-need" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Which gRPC versions are available?
+        Which C++ standard do I need?
       
     </span>
   </a>
@@ -1433,39 +1455,110 @@
 <h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#general-questions">General Questions</a></li>
-<li><a href="#installation--setup">Installation &amp; Setup</a></li>
+<li><a href="#installation-setup">Installation &amp; Setup</a></li>
 <li><a href="#building-examples">Building Examples</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 <li><a href="#version-compatibility">Version Compatibility</a></li>
-<li><a href="#license-&amp;-legal">License &amp; Legal</a></li>
+<li><a href="#license-legal">License &amp; Legal</a></li>
 </ol>
 <hr />
 <h2 id="general-questions">General Questions<a class="headerlink" href="#general-questions" title="Permanent link">&para;</a></h2>
 <h3 id="what-is-cpp-grpc-windows-prebuilts">What is Cpp-gRPC-Windows-PreBuilts?<a class="headerlink" href="#what-is-cpp-grpc-windows-prebuilts" title="Permanent link">&para;</a></h3>
-<p>Cpp-gRPC-Windows-PreBuilts provides precompiled gRPC libraries and required header files for Windows development using Visual Studio. It simplifies the setup process by providing ready-to-use archives that can be extracted and used immediately.</p>
-<h3 id="who-should-use-this-project">Who should use this project?<a class="headerlink" href="#who-should-use-this-project" title="Permanent link">&para;</a></h3>
-<p>This project is ideal for:</p>
+<p>Cpp-gRPC-Windows-PreBuilts provides prebuilt <a href="https://github.com/grpc/grpc">gRPC C++</a> libraries for Windows and Visual Studio.
+You download ready-to-use ZIP archives, extract them, and link against gRPC without building it from source.</p>
+<p>Each release contains:</p>
 <ul>
-<li>Developers who want to quickly start working with gRPC on Windows</li>
-<li>Teams that need consistent build environments across multiple developers</li>
-<li>Projects requiring support for older Visual Studio versions (2015, 2017)</li>
-<li>Developers who prefer not to compile gRPC from source</li>
+<li><strong>Library archives</strong> (for example <code>MSVC143_64.zip</code>) with the headers and precompiled libraries for one compiler and one architecture.</li>
+<li><strong>Examples</strong> (<code>Examples.zip</code>) with preconfigured Visual Studio solutions for the official gRPC C++ examples.</li>
+<li><strong>Build information</strong> that records the compilers, SDKs and settings used for the build (tracked since v1.22.0).</li>
 </ul>
+<p>The project is split across these repositories:</p>
+<table>
+<thead>
+<tr>
+<th>Repository</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts">Cpp-gRPC-Windows-PreBuilts</a></td>
+<td>Overview, release table and this documentation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/thommyho/gRPC_windows/releases">gRPC_windows</a></td>
+<td>Release downloads (ZIP archives)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/thommyho/gRPC_windows_prebuilt">gRPC_windows_prebuilt</a></td>
+<td>Build information for each version</td>
+</tr>
+<tr>
+<td><a href="https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples">Cpp-gRPC-Visual-Studio-Examples</a></td>
+<td>Source of the Visual Studio examples</td>
+</tr>
+</tbody>
+</table>
+<h3 id="who-should-use-this-project">Who should use this project?<a class="headerlink" href="#who-should-use-this-project" title="Permanent link">&para;</a></h3>
+<p>This project is a good fit if you:</p>
+<ul>
+<li>Want to start with gRPC on Windows quickly, without building it from source.</li>
+<li>Need the same gRPC binaries for every developer and every CI agent of a team.</li>
+<li>Use Visual Studio solutions (<code>.sln</code>) or CMake with <code>find_package</code>.</li>
+<li>Must stay on C++11 or an older Visual Studio version (see <a href="#version-compatibility">Version Compatibility</a>).</li>
+</ul>
+<h3 id="which-grpc-versions-are-available">Which gRPC versions are available?<a class="headerlink" href="#which-grpc-versions-are-available" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Latest stable build</strong>: <a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.3">v1.85.3</a></li>
+<li><strong>Last build requiring only C++11</strong>: <a href="https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7">v1.46.7</a></li>
+</ul>
+<p>All available versions, from v1.20.0 up to the latest, are in the <a href="../steps/#download">release table</a>.</p>
 <h3 id="what-compilers-are-supported">What compilers are supported?<a class="headerlink" href="#what-compilers-are-supported" title="Permanent link">&para;</a></h3>
 <p>The following Microsoft Visual C++ compiler toolsets are supported:</p>
-<ul>
-<li><strong>Visual Studio 2022</strong> - MSVC 143</li>
-<li><strong>Visual Studio 2019</strong> - MSVC 142</li>
-<li><strong>Visual Studio 2017</strong> - MSVC 141 (up to gRPC v1.45.2)</li>
-<li><strong>Visual Studio 2015</strong> - MSVC 140 (up to gRPC v1.45.2)</li>
-</ul>
-<p>Both 32-bit and 64-bit architectures are supported for all compiler versions.</p>
+<table>
+<thead>
+<tr>
+<th>Visual Studio</th>
+<th>Toolset</th>
+<th>gRPC versions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visual Studio 2026</td>
+<td>MSVC 145</td>
+<td>v1.85.0 and later</td>
+</tr>
+<tr>
+<td>Visual Studio 2022</td>
+<td>MSVC 143</td>
+<td>all current releases</td>
+</tr>
+<tr>
+<td>Visual Studio 2019</td>
+<td>MSVC 142</td>
+<td>up to v1.84.x</td>
+</tr>
+<tr>
+<td>Visual Studio 2017</td>
+<td>MSVC 141</td>
+<td>up to v1.45.1, and v1.46.7</td>
+</tr>
+<tr>
+<td>Visual Studio 2015</td>
+<td>MSVC 140</td>
+<td>up to v1.45.x</td>
+</tr>
+</tbody>
+</table>
+<p>Each toolset is available for 32-bit (<code>x86</code>) and 64-bit (<code>x64</code>).
+The <a href="../steps/#download">release table</a> shows the exact toolsets of each version.</p>
 <h3 id="what-build-configurations-are-available">What build configurations are available?<a class="headerlink" href="#what-build-configurations-are-available" title="Permanent link">&para;</a></h3>
-<p>Three build configurations are provided:</p>
+<p>Each library archive contains three build configurations:</p>
 <ul>
-<li><strong>Debug</strong> - For development with full debugging support</li>
-<li><strong>RelWithDebInfo</strong> - Release builds with debug information (recommended for production)</li>
-<li><strong>Release</strong> - Optimized builds without debug symbols</li>
+<li><strong>Debug</strong> - No optimization, full debug symbols. Use it for development.</li>
+<li><strong>RelWithDebInfo</strong> - Optimized, with debug symbols. Use it for production builds that you must debug.</li>
+<li><strong>Release</strong> - Optimized, without debug symbols.</li>
 </ul>
 <hr />
 <h2 id="installation-setup">Installation &amp; Setup<a class="headerlink" href="#installation-setup" title="Permanent link">&para;</a></h2>
@@ -1473,7 +1566,7 @@
 <p>You have two options:</p>
 <ol>
 <li>
-<p><strong>Direct from GitHub Releases</strong>: Navigate to the <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/releases">repository releases page</a> and select your desired gRPC version.</p>
+<p><strong>Direct from GitHub Releases</strong>: Navigate to the <a href="https://github.com/thommyho/gRPC_windows/releases">releases page</a> and select your desired gRPC version.</p>
 </li>
 <li>
 <p><strong>Release Version Table</strong>: Check the available versions in the <a href="../steps/#download">release version table</a>.</p>
@@ -1499,7 +1592,9 @@
 ├─ MSVC142_32/                # VS2019 32-bit headers/libs
 ├─ MSVC142_64/                # VS2019 64-bit headers/libs
 ├─ MSVC143_32/                # VS2022 32-bit headers/libs
-└─ MSVC143_64/                # VS2022 64-bit headers/libs
+├─ MSVC143_64/                # VS2022 64-bit headers/libs
+├─ MSVC145_32/                # VS2026 32-bit headers/libs
+└─ MSVC145_64/                # VS2026 64-bit headers/libs
 </code></pre></div>
 <h3 id="do-i-need-to-install-grpc-from-source">Do I need to install gRPC from source?<a class="headerlink" href="#do-i-need-to-install-grpc-from-source" title="Permanent link">&para;</a></h3>
 <p><strong>No!</strong> The prebuilt libraries include all necessary components:</p>
@@ -1628,43 +1723,27 @@
 </ul>
 <hr />
 <h2 id="version-compatibility">Version Compatibility<a class="headerlink" href="#version-compatibility" title="Permanent link">&para;</a></h2>
-<h3 id="which-grpc-versions-are-available">Which gRPC versions are available?<a class="headerlink" href="#which-grpc-versions-are-available" title="Permanent link">&para;</a></h3>
+<h3 id="which-c-standard-do-i-need">Which C++ standard do I need?<a class="headerlink" href="#which-c-standard-do-i-need" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Version</th>
-<th>Status</th>
-<th>C++ Standard</th>
-<th>Examples</th>
+<th>gRPC version</th>
+<th>Minimum C++ standard</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1.83.0</strong></td>
-<td>Latest</td>
-<td>C++17/20</td>
-<td>✅</td>
+<td>v1.47.0 and later</td>
+<td>C++14 (newer gRPC versions can require a newer standard, see the <a href="https://github.com/grpc/grpc/releases">gRPC release notes</a>)</td>
 </tr>
 <tr>
-<td><strong>1.46.7</strong></td>
-<td>Legacy (last C++11)</td>
+<td>v1.46.7 and older</td>
 <td>C++11</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>1.82.1 - 1.50.0</td>
-<td>Available</td>
-<td>C++17/20</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>1.49.1 - 1.20.0</td>
-<td>Older versions</td>
-<td>C++11/14/17</td>
-<td>✅</td>
 </tr>
 </tbody>
 </table>
+<p>gRPC C++ <strong>v1.47.0</strong> is the first release that requires C++14.
+If you cannot upgrade to C++14, use <strong>v1.46.7</strong>, the last release that requires only C++11.</p>
 <h3 id="what-changed-in-v1781">What changed in v1.78.1?<a class="headerlink" href="#what-changed-in-v1781" title="Permanent link">&para;</a></h3>
 <p>Starting with gRPC v1.78.1, the deployment layout for CMake files changed:</p>
 <ul>
@@ -1672,12 +1751,14 @@
 <li>This change simplifies integration using <code>find_package</code></li>
 </ul>
 <h3 id="do-older-visual-studio-versions-still-work">Do older Visual Studio versions still work?<a class="headerlink" href="#do-older-visual-studio-versions-still-work" title="Permanent link">&para;</a></h3>
-<p>Yes! Up to gRPC v1.45.2, support is provided for:</p>
+<p>Yes, but only with older gRPC versions:</p>
 <ul>
-<li>Visual Studio 2017 (MSVC 141)</li>
-<li>Visual Studio 2015 (MSVC 140)</li>
+<li>Visual Studio 2019 (MSVC 142): up to gRPC v1.84.x</li>
+<li>Visual Studio 2017 (MSVC 141): up to gRPC v1.45.1, and v1.46.7</li>
+<li>Visual Studio 2015 (MSVC 140): up to gRPC v1.45.x</li>
 </ul>
-<p>Note: For the latest gRPC versions (v1.78+), only Visual Studio 2019 and 2022 are supported.</p>
+<p>From gRPC v1.85.0, releases are built for Visual Studio 2026 (MSVC 145) and Visual Studio 2022 (MSVC 143).
+See <a href="#what-compilers-are-supported">What compilers are supported?</a> for the full list.</p>
 <hr />
 <h2 id="license-legal">License &amp; Legal<a class="headerlink" href="#license-legal" title="Permanent link">&para;</a></h2>
 <h3 id="what-license-is-this-project-under">What license is this project under?<a class="headerlink" href="#what-license-is-this-project-under" title="Permanent link">&para;</a></h3>
@@ -1755,14 +1836,14 @@
   <div class="footer-commit">
     <span class="commit-msg">Latest commit:</span>
 
-    <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commit/1167e4768ab37604f9ed7d5a8c5614f47206580b"
+    <a href="https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/commit/22513e2c356b84422e360dbe930eaa6d1ccd3e04"
        target="_blank"
        rel="noopener">
-      <span class="commit-sha">1167e47</span>
+      <span class="commit-sha">22513e2</span>
     </a>
 
     <span class="commit-title">
-      Add Sponsorship section to navigation in mkdocs.yml
+      feat: update README and FAQ with new Visual Studio 2026 support and improved clarity
     </span>
   </div>
 
