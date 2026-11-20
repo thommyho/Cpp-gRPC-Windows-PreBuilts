@@ -3,11 +3,11 @@
 ## Table of Contents
 
 1. [General Questions](#general-questions)
-2. [Installation & Setup](#installation--setup)
+2. [Installation & Setup](#installation-setup)
 3. [Building Examples](#building-examples)
 4. [Troubleshooting](#troubleshooting)
 5. [Version Compatibility](#version-compatibility)
-6. [License & Legal](#license-&-legal)
+6. [License & Legal](#license-legal)
 
 ______________________________________________________________________
 
@@ -15,35 +15,62 @@ ______________________________________________________________________
 
 ### What is Cpp-gRPC-Windows-PreBuilts?
 
-Cpp-gRPC-Windows-PreBuilts provides precompiled gRPC libraries and required header files for Windows development using Visual Studio. It simplifies the setup process by providing ready-to-use archives that can be extracted and used immediately.
+Cpp-gRPC-Windows-PreBuilts provides prebuilt [gRPC C++](https://github.com/grpc/grpc) libraries for Windows and Visual Studio.
+You download ready-to-use ZIP archives, extract them, and link against gRPC without building it from source.
+
+Each release contains:
+
+- **Library archives** (for example `MSVC143_64.zip`) with the headers and precompiled libraries for one compiler and one architecture.
+- **Examples** (`Examples.zip`) with preconfigured Visual Studio solutions for the official gRPC C++ examples.
+- **Build information** that records the compilers, SDKs and settings used for the build (tracked since v1.22.0).
+
+The project is split across these repositories:
+
+| Repository | Content |
+| ---------- | ------- |
+| [Cpp-gRPC-Windows-PreBuilts](https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts) | Overview, release table and this documentation |
+| [gRPC_windows](https://github.com/thommyho/gRPC_windows/releases) | Release downloads (ZIP archives) |
+| [gRPC_windows_prebuilt](https://github.com/thommyho/gRPC_windows_prebuilt) | Build information for each version |
+| [Cpp-gRPC-Visual-Studio-Examples](https://github.com/thommyho/Cpp-gRPC-Visual-Studio-Examples) | Source of the Visual Studio examples |
 
 ### Who should use this project?
 
-This project is ideal for:
+This project is a good fit if you:
 
-- Developers who want to quickly start working with gRPC on Windows
-- Teams that need consistent build environments across multiple developers
-- Projects requiring support for older Visual Studio versions (2015, 2017)
-- Developers who prefer not to compile gRPC from source
+- Want to start with gRPC on Windows quickly, without building it from source.
+- Need the same gRPC binaries for every developer and every CI agent of a team.
+- Use Visual Studio solutions (`.sln`) or CMake with `find_package`.
+- Must stay on C++11 or an older Visual Studio version (see [Version Compatibility](#version-compatibility)).
+
+### Which gRPC versions are available?
+
+- **Latest stable build**: [v1.85.3](https://github.com/thommyho/gRPC_windows/releases/tag/v1.85.3)
+- **Last build requiring only C++11**: [v1.46.7](https://github.com/thommyho/gRPC_windows/releases/tag/v1.46.7)
+
+All available versions, from v1.20.0 up to the latest, are in the [release table](steps.md#download).
 
 ### What compilers are supported?
 
 The following Microsoft Visual C++ compiler toolsets are supported:
 
-- **Visual Studio 2022** - MSVC 143
-- **Visual Studio 2019** - MSVC 142
-- **Visual Studio 2017** - MSVC 141 (up to gRPC v1.45.2)
-- **Visual Studio 2015** - MSVC 140 (up to gRPC v1.45.2)
+| Visual Studio | Toolset | gRPC versions |
+| ------------- | ------- | ------------- |
+| Visual Studio 2026 | MSVC 145 | v1.85.0 and later |
+| Visual Studio 2022 | MSVC 143 | all current releases |
+| Visual Studio 2019 | MSVC 142 | up to v1.84.x |
+| Visual Studio 2017 | MSVC 141 | up to v1.45.1, and v1.46.7 |
+| Visual Studio 2015 | MSVC 140 | up to v1.45.x |
 
-Both 32-bit and 64-bit architectures are supported for all compiler versions.
+Each toolset is available for 32-bit (`x86`) and 64-bit (`x64`).
+The [release table](steps.md#download) shows the exact toolsets of each version.
 
 ### What build configurations are available?
 
-Three build configurations are provided:
+Each library archive contains three build configurations:
 
-- **Debug** - For development with full debugging support
-- **RelWithDebInfo** - Release builds with debug information (recommended for production)
-- **Release** - Optimized builds without debug symbols
+- **Debug** - No optimization, full debug symbols. Use it for development.
+- **RelWithDebInfo** - Optimized, with debug symbols. Use it for production builds that you must debug.
+- **Release** - Optimized, without debug symbols.
 
 ______________________________________________________________________
 
@@ -53,7 +80,7 @@ ______________________________________________________________________
 
 You have two options:
 
-1. **Direct from GitHub Releases**: Navigate to the [repository releases page](https://github.com/thommyho/Cpp-gRPC-Windows-PreBuilts/releases) and select your desired gRPC version.
+1. **Direct from GitHub Releases**: Navigate to the [releases page](https://github.com/thommyho/gRPC_windows/releases) and select your desired gRPC version.
 
 2. **Release Version Table**: Check the available versions in the [release version table](steps.md#download).
 
@@ -81,7 +108,9 @@ your-project/
 ├─ MSVC142_32/                # VS2019 32-bit headers/libs
 ├─ MSVC142_64/                # VS2019 64-bit headers/libs
 ├─ MSVC143_32/                # VS2022 32-bit headers/libs
-└─ MSVC143_64/                # VS2022 64-bit headers/libs
+├─ MSVC143_64/                # VS2022 64-bit headers/libs
+├─ MSVC145_32/                # VS2026 32-bit headers/libs
+└─ MSVC145_64/                # VS2026 64-bit headers/libs
 ```
 
 ### Do I need to install gRPC from source?
@@ -195,14 +224,15 @@ ______________________________________________________________________
 
 ## Version Compatibility
 
-### Which gRPC versions are available?
+### Which C++ standard do I need?
 
-| Version         | Status              | C++ Standard | Examples |
-| --------------- | ------------------- | ------------ | -------- |
-| **1.83.0**      | Latest              | C++17/20     | ✅       |
-| **1.46.7**      | Legacy (last C++11) | C++11        | ✅       |
-| 1.82.1 - 1.50.0 | Available           | C++17/20     | ✅       |
-| 1.49.1 - 1.20.0 | Older versions      | C++11/14/17  | ✅       |
+| gRPC version     | Minimum C++ standard |
+| ---------------- | -------------------- |
+| v1.47.0 and later | C++14 (newer gRPC versions can require a newer standard, see the [gRPC release notes](https://github.com/grpc/grpc/releases)) |
+| v1.46.7 and older | C++11 |
+
+gRPC C++ **v1.47.0** is the first release that requires C++14.
+If you cannot upgrade to C++14, use **v1.46.7**, the last release that requires only C++11.
 
 ### What changed in v1.78.1?
 
@@ -213,12 +243,14 @@ Starting with gRPC v1.78.1, the deployment layout for CMake files changed:
 
 ### Do older Visual Studio versions still work?
 
-Yes! Up to gRPC v1.45.2, support is provided for:
+Yes, but only with older gRPC versions:
 
-- Visual Studio 2017 (MSVC 141)
-- Visual Studio 2015 (MSVC 140)
+- Visual Studio 2019 (MSVC 142): up to gRPC v1.84.x
+- Visual Studio 2017 (MSVC 141): up to gRPC v1.45.1, and v1.46.7
+- Visual Studio 2015 (MSVC 140): up to gRPC v1.45.x
 
-Note: For the latest gRPC versions (v1.78+), only Visual Studio 2019 and 2022 are supported.
+From gRPC v1.85.0, releases are built for Visual Studio 2026 (MSVC 145) and Visual Studio 2022 (MSVC 143).
+See [What compilers are supported?](#what-compilers-are-supported) for the full list.
 
 ______________________________________________________________________
 

@@ -77,7 +77,9 @@ your-project/
 ├─ MSVC142_32/                # From library archives - VS2019 32-bit headers/libs
 ├─ MSVC142_64/                # From library archives - VS2019 64-bit headers/libs
 ├─ MSVC143_32/                # From library archives - VS2022 32-bit headers/libs
-└─ MSVC143_64/                # From library archives - VS2022 64-bit headers/libs
+├─ MSVC143_64/                # From library archives - VS2022 64-bit headers/libs
+├─ MSVC145_32/                # From library archives - VS2026 32-bit headers/libs
+└─ MSVC145_64/                # From library archives - VS2026 64-bit headers/libs
 ```
 
 ### Step 3: Build Examples
