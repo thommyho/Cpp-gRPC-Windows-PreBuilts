@@ -85,6 +85,8 @@ nav:
   - "Getting started":
       - "In three steps": steps.md
       - "FAQ": faq.md
+  - "Sponsorship":
+      - "Sponsorship": sponsorship.md
 
 extra:
   footer:
