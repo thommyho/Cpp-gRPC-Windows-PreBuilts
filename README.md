@@ -1,6 +1,6 @@
 # Prebuilt binaries gRPC C++ for Windows
 
-### gRPC [v1.84.1](https://github.com/grpc/grpc/releases/tag/v1.84.1)
+### gRPC [v1.84.2](https://github.com/grpc/grpc/releases/tag/v1.84.2)
 
 > **Note**: Prebuilt binaries can be downloaded as zip archives from the [Releases](https://github.com/thommyho/gRPC_windows/releases) page.
 
@@ -18,9 +18,9 @@ ______________________________________________________________________
 
 ##### Releases
 
-| Version                                                                  | Commit                                                                                  | Commit-Date                | Build Configurations                        | Compiler Set                                                                                 | Example |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- | ------- |
-| [v1.84.1](https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.1) | [b0c0c4f](https://github.com/grpc/grpc/commit/b0c0c4f8823ba69e7e43aaaf183c30a43e549924) | Thursday, October 22, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 🆕 MSVC145: x86, x64<br>💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
+| Version                                                                  | Commit                                                                                  | Commit-Date              | Build Configurations                        | Compiler Set                                                                                 | Example |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------- | ------- |
+| [v1.84.2](https://github.com/thommyho/gRPC_windows/releases/tag/v1.84.2) | [41ee9aa](https://github.com/grpc/grpc/commit/41ee9aad18b902ea75a6ff5505d71dce6082613f) | Friday, October 30, 2026 | 🛠️ Debug<br>🚀 Release<br>🔧 RelWithDebInfo | 🆕 MSVC145: x86, x64<br>💻 MSVC143: x86, x64<br>🖥️ MSVC142: x86, x64<br>🔲 MSVC141: x86, x64 | ✅      |
 
 ______________________________________________________________________
 
@@ -46,26 +46,26 @@ ______________________________________________________________________
 
 #### Information about Build system and Tools
 
-| Operating System | SDK Version                                       |
-| ---------------- | ------------------------------------------------- |
-| Windows          | 10.0.22621                                        |
-| Processor        | AMD64 Family 23 Model 17 Stepping 0, AuthenticAMD |
-| Architecture     | AMD64                                             |
+| Operating System | SDK Version                                        |
+| ---------------- | -------------------------------------------------- |
+| Windows          | 10.0.26300                                         |
+| Processor        | AMD64 Family 15 Model 107 Stepping 1, AuthenticAMD |
+| Architecture     | AMD64                                              |
 
 #### Build Tools
 
 | Build Tool | Version |
 | ---------- | ------- |
-| git        | 2.47.0  |
-| cmake      | 3.31.3  |
-| nasm       | 2.16.03 |
-| golang     | 1.23.5  |
+| git        | 2.55.0  |
+| cmake      | 4.4.4   |
+| nasm       | 3.02    |
+| golang     | 1.27.4  |
 
 #### Visual Studio Versions and Compiler Sets
 
 | Visual Studio Version | Compiler Set Versions |
 | --------------------- | --------------------- |
-| 2022                  | 14.42.34433           |
+| 2022                  | 14.44.35207           |
 | 2019                  | 14.29.30133           |
 
 #### gRPC c++ Third Party Components
